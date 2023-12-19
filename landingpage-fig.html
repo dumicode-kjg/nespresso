@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no">
+
+    <!--local-->
+    <link rel="stylesheet" href="https://www.nespresso.com/mosaic/_ui/generated/responsiveLoadedFirst.css?v=d75267ff68f6601ccab55079edee85930f503264" type="text/css" />
+    <link rel="stylesheet" href="https://www.nespresso.com/mosaic/_ui/generated/responsiveComponents.css?v=d75267ff68f6601ccab55079edee85930f503264" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-lazyload/1.3.3/vue-lazyload.js"></script>
+    <script src="https://unpkg.com/vue-i18n@8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.8.7/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.js"></script>
+    <!--  -->
+
+    <title>NESPRESSO</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'gtmDataObject', 'GTM-KH9FPVL');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@4.5.1/dist/css/swiper.min.css" />
+    <script src="https://unpkg.com/swiper@4.5.1/dist/js/swiper.min.js"></script>
+    <!--// swiper -->
+
+    <!-- style -->
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900&display=swap&subset=korean');
+
+      /* 적용시 삭제 */
+      @font-face {
+        font-family: 'Nespresso lucas';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(NespressoLucas-Regular.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Nespresso lucas';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(NespressoLucas-Med.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Nespresso lucas';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(NespressoLucas-Bold.woff) format('woff');
+      }
+      @font-face {
+        font-family: 'Nespresso lucas';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url(NespressoLucas-XtraBd.woff) format('woff');
+      }
+      /*// 적용시 삭제 */
+
+      body {
+        background: #000;
+        color: #000;
+        line-height: 1;
+        text-align: center;
+        font-family: 'Nespresso lucas', 'Noto Sans KR', sans-serif;
+        word-break: keep-all;
+      }
+
+      .alt_text {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 1px;
+        height: 1px;
+        border: none;
+        opacity: 0.01;
+        background: none;
+        overflow: hidden;
+      }
+
+      .br_m {
+        display: none;
+      }
+      .br_pc {
+        display: block;
+        width: 100%;
+      }
+
+      .box_inner {
+        width: 100%;
+        max-width: 1220px;
+        margin: 0 auto;
+      }
+
+      .visual {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 821px;
+        background: url(images/visual_bg.jpg) no-repeat center center;
+        background-size: cover;
+      }
+      .visual .in_logo {
+        position: absolute;
+        top: 43px;
+        left: 39px;
+        width: 181px;
+        height: 32px;
+        text-indent: -999px;
+        overflow: hidden;
+      }
+      .visual .in_logo a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(images/logo.png) no-repeat 0 center;
+        background-size: contain;
+      }
+      .visual .box_inner {
+        display: flex;
+        align-items: center;
+      }
+      .visual .video_box {
+        flex: 0 0 auto;
+        position: relative;
+        width: 627px;
+        height: 512px;
+      }
+      .visual .video_box iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .visual .txtbox {
+        margin-left: 48px;
+        text-align: left;
+      }
+      .visual .txtbox .tit {
+        color: #f1ede2;
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .visual .txtbox .txt {
+        margin-top: 34px;
+        color: #f1ede2;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+
+      .section01 {
+        padding: 100px 0 137px;
+        background: #ede1cb;
+      }
+      .section01 .box_inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .section01 .stit {
+        height: 61px;
+        padding: 4px 16px 0;
+        background: #ab8769;
+        color: #ede1cb;
+        font-size: 36px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+      .section01 .stit strong {
+        font-weight: 900;
+      }
+      .section01 .tit {
+        margin-top: 11px;
+        color: #ab8769;
+        font-size: 48px;
+        line-height: 70px;
+        font-weight: 700;
+      }
+      .section01 .tit_p {
+        position: relative;
+        margin-top: 35px;
+        padding-top: 45px;
+        color: #5a4636;
+        font-size: 35px;
+        line-height: 47px;
+        font-weight: 700;
+      }
+      .section01 .tit_p::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 74px;
+        height: 2px;
+        margin-left: -37px;
+        background: #ab8769;
+      }
+      .section01 .txt {
+        margin-top: 35px;
+        color: #696969;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+      .section01 .imgbox {
+        position: relative;
+        width: 288px;
+        height: 255px;
+        margin-top: 60px;
+      }
+      .section01 .imgbox .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+      .section01 .icobox {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+      }
+      .section01 .icobox li {
+        width: 190px;
+      }
+      .section01 .icobox li .ico {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+      .section01 .icobox li .txt {
+        padding-left: 0.2em;
+        color: #8f6746;
+        font-size: 24px;
+        line-height: 48px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+      }
+
+      .section02 {
+        padding: 100px 0 150px;
+        background: #fff;
+        overflow: hidden;
+      }
+      .section02 .box_inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .section02 .stit {
+        height: 61px;
+        padding: 4px 16px 0;
+        background: #928c6e;
+        color: #fff;
+        font-size: 36px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+      .section02 .stit strong {
+        font-weight: 900;
+      }
+      .section02 .tit {
+        margin-top: 11px;
+        color: #928c6e;
+        font-size: 48px;
+        line-height: 70px;
+        font-weight: 700;
+      }
+      .section02 .txt {
+        margin-top: 35px;
+        color: #696969;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+      .section02 .swiperbox {
+        position: relative;
+        margin: 40px auto 50px;
+      }
+      .section02 .swiperbox .swiper-container {
+        width: 730px;
+        height: 474px;
+        overflow: visible;
+      }
+      .section02 .swiperbox .swiper-slide {
+        display: flex;
+        align-items: center;
+        width: auto;
+        padding: 0 10px;
+      }
+      .section02 .swiperbox .imgbox {
+        position: relative;
+        width: 394px;
+        height: 263px;
+        transition: 0.3s;
+      }
+      .section02 .swiperbox .imgbox .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        transition: 0.3s;
+      }
+      .section02 .swiperbox .imgbox .img_on {
+        opacity: 0;
+      }
+      .section02 .swiperbox .imgbox .img_off {
+        opacity: 1;
+      }
+      .section02 .swiperbox .swiper-slide-active .imgbox {
+        width: 710px;
+        height: 474px;
+      }
+      .section02 .swiperbox .swiper-slide-active .imgbox .img_on {
+        opacity: 1;
+      }
+      .section02 .swiperbox .swiper-slide-active .imgbox .img_off {
+        opacity: 0;
+      }
+      .section02 .swiperbox .swiper-button-prev {
+        left: 0;
+        width: 90px;
+        height: 160px;
+        margin-top: -80px;
+        background: url(images/btn_prev_white.png) no-repeat center center rgba(0, 0, 0, 0.6);
+        background-size: 24px;
+      }
+      .section02 .swiperbox .swiper-button-next {
+        right: 0;
+        width: 90px;
+        height: 160px;
+        margin-top: -80px;
+        background: url(images/btn_next_white.png) no-repeat center center rgba(0, 0, 0, 0.6);
+        background-size: 24px;
+      }
+      .section02 .swiperbox .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        bottom: -50px;
+        width: 100%;
+        line-height: 12px;
+      }
+      .section02 .swiperbox .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+        border: 1px solid #9fa0a0;
+        background: #fff;
+        opacity: 1;
+      }
+      .section02 .swiperbox .swiper-pagination-bullet-active {
+        background: #9fa0a0;
+      }
+
+      .section03 {
+        padding: 88px 0 150px;
+        background: #fef7e9;
+      }
+      .section03 .box_inner {
+        display: flex;
+      }
+      .section03 .txtbox {
+        width: 100%;
+        padding-top: 77px;
+        text-align: left;
+      }
+      .section03 .txtbox .tit {
+        color: #734f31;
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+      .section03 .txtbox .tit .lucas_size {
+        font-size: 58px;
+      }
+      .section03 .txtbox .txt {
+        margin-top: 34px;
+        color: #696969;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+      .section03 .imgbox {
+        flex: 0 0 auto;
+        position: relative;
+        width: 666px;
+        height: 608px;
+      }
+      .section03 .imgbox .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+
+      .section04 {
+        padding: 150px 0;
+        background: #fff;
+      }
+      .section04 .box_inner {
+        display: flex;
+        align-items: center;
+      }
+      .section04 .imgbox {
+        flex: 0 0 auto;
+        position: relative;
+        width: 533px;
+        height: 533px;
+      }
+      .section04 .imgbox::before {
+        content: '';
+        position: absolute;
+        top: -56px;
+        left: -56px;
+        width: 380px;
+        height: 638px;
+        background: #7d9959;
+      }
+      .section04 .imgbox .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      .section04 .txtbox {
+        width: 100%;
+        margin-left: 80px;
+        text-align: left;
+      }
+      .section04 .txtbox .tit {
+        color: #546223;
+        font-size: 48px;
+        line-height: 44px;
+        font-weight: 700;
+      }
+      .section04 .txtbox .txt {
+        position: relative;
+        margin-top: 43px;
+        padding-left: 30px;
+        color: #696969;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 500;
+      }
+      .section04 .txtbox .txt .num {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .section04 .txtbox .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 364px;
+        height: 60px;
+        margin-top: 18px;
+        padding-top: 3px;
+        padding-right: 24px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        background: url(images/ico_go.png) no-repeat right 17px center;
+        background-size: 26px;
+        color: #000;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+      }
+      .section04 .txtbox .cs_txt {
+        margin-top: 30px;
+        color: #696969;
+        font-size: 20px;
+        line-height: 36px;
+        font-weight: 500;
+      }
+      .section04 .txtbox .cs_tel {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        height: 50px;
+        margin-top: 20px;
+        padding-left: 108px;
+        background: url(images/ico_tel.png) no-repeat 34px center;
+        background-size: 24px;
+        text-align: center;
+      }
+      .section04 .txtbox .cs_tel::before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        left: 85px;
+        width: 1px;
+        background: #000;
+      }
+      .section04 .txtbox .cs_tel dt,
+      .section04 .txtbox .cs_tel dd {
+        color: #000;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 500;
+      }
+
+      .section05 {
+        padding: 88px 0 150px;
+        background: url(images/section05_bg.jpg) no-repeat center center;
+        background-size: cover;
+      }
+      .section05 .box_inner {
+        display: flex;
+        flex-direction: column;
+      }
+      .section05 .tit {
+        color: #000;
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+        font-family: 'Noto Sans KR';
+      }
+      .section05 .tit .lucas_size {
+        font-size: 58px;
+        font-family: 'Nespresso lucas';
+        font-weight: 600;
+      }
+      .section05 .tit strong.lucas_size {
+        font-weight: 700;
+      }
+      .section05 .tit .ico_recycle {
+        display: inline-block;
+        width: 58px;
+        height: 60px;
+        background: url(images/ico_recycle.png) no-repeat center center;
+        background-size: 58px;
+        vertical-align: top;
+      }
+      .section05 .txt {
+        margin-top: 30px;
+        padding-bottom: 24px;
+        color: #000;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+      .section05 .itembox {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 30px;
+        padding: 70px 70px 70px 80px;
+        background: #fff;
+        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
+      }
+      .section05 .itembox01 .in_txtbox {
+        flex: 1;
+        text-align: left;
+      }
+      .section05 .itembox01 .in_txtbox .in_stit {
+        color: #000;
+        font-size: 45px;
+        line-height: 58px;
+        font-weight: 300;
+      }
+      .section05 .itembox01 .in_txtbox .in_tit {
+        margin-top: 35px;
+        color: #000;
+        font-size: 35px;
+        line-height: 33px;
+        font-weight: 700;
+      }
+      .section05 .itembox01 .in_txtbox .in_txt {
+        margin-top: 40px;
+        color: #000;
+        font-size: 21px;
+        line-height: 33px;
+        font-weight: 300;
+      }
+      .section05 .itembox01 .in_imgbox {
+        position: relative;
+        width: 610px;
+        height: 501px;
+      }
+      .section05 .itembox01 .in_imgbox .in_img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+
+      .section05 .itembox02 .in_imgbox {
+        order: 0;
+        position: relative;
+        width: 500px;
+        height: 439px;
+      }
+      .section05 .itembox02 .in_imgbox .in_img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      .section05 .itembox02 .in_txtbox {
+        flex: 1;
+        margin-left: 50px;
+        text-align: left;
+      }
+      .section05 .itembox02 .in_txtbox .in_tit {
+        display: inline-flex;
+        position: relative;
+        color: #000;
+        font-size: 32px;
+        line-height: 42px;
+        font-weight: 400;
+      }
+      .section05 .itembox02 .in_txtbox .in_tit::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 256px;
+        height: 1px;
+        margin: -4px 0 0 18px;
+        background: #000;
+      }
+      .section05 .itembox02 .in_txtbox .in_txt {
+        margin-top: 36px;
+        color: #000;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 400;
+      }
+      .section05 .itembox02 .in_txtbox .in_stit {
+        margin-top: 16px;
+        color: #000;
+        font-size: 27px;
+        line-height: 39px;
+        font-weight: 400;
+      }
+      .section05 .itembox02 .in_historybox {
+        display: flex;
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 34px;
+      }
+      .section05 .itembox02 .in_history {
+        flex: 1;
+        padding: 0 16px;
+      }
+      .section05 .itembox02 .in_history .in_history_tit {
+        height: 40px;
+        margin-top: 3px;
+        padding-top: 2px;
+        background: #ab8769;
+        color: #fff;
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: 400;
+      }
+      .section05 .itembox02 .in_history .in_history_list {
+        padding: 15px 15px 0;
+        text-align: left;
+      }
+      .section05 .itembox02 .in_history .in_history_list li {
+        position: relative;
+        padding-left: 48px;
+        color: #000;
+        font-size: 21px;
+        line-height: 33px;
+        font-weight: 400;
+      }
+      .section05 .itembox02 .in_history .in_history_list li .year {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .section05 .itembox02 .in_history + .in_history {
+        flex: none;
+        width: 675px;
+        border-left: 2px solid #b8b8b8;
+      }
+      .section05 .itembox02 .in_history + .in_history .in_history_tit {
+        background: #b6b8a8;
+      }
+
+      .section06 {
+        padding: 88px 0 150px;
+        background: #f7f8f8;
+        overflow: hidden;
+      }
+      .section06 .tit {
+        color: #000;
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+      .section06 .tit .lucas_size {
+        font-size: 58px;
+      }
+      .section06 .swiperbox {
+        position: relative;
+        margin: 64px auto 50px;
+      }
+      .section06 .swiperbox .swiper-container {
+        width: 730px;
+        height: 474px;
+        overflow: visible;
+      }
+      .section06 .swiperbox .swiper-slide {
+        display: flex;
+        align-items: center;
+        width: auto;
+        padding: 0 10px;
+      }
+      .section06 .swiperbox .imgbox {
+        position: relative;
+        width: 394px;
+        height: 263px;
+        transition: 0.3s;
+      }
+      .section06 .swiperbox .imgbox .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        transition: 0.3s;
+      }
+      .section06 .swiperbox .imgbox .img_on {
+        opacity: 0;
+      }
+      .section06 .swiperbox .imgbox .img_off {
+        opacity: 1;
+      }
+      .section06 .swiperbox .swiper-slide-active .imgbox {
+        width: 710px;
+        height: 474px;
+      }
+      .section06 .swiperbox .swiper-slide-active .imgbox .img_on {
+        opacity: 1;
+      }
+      .section06 .swiperbox .swiper-slide-active .imgbox .img_off {
+        opacity: 0;
+      }
+      .section06 .swiperbox .swiper-button-prev {
+        left: 0;
+        width: 90px;
+        height: 160px;
+        margin-top: -80px;
+        background: url(images/btn_prev_white.png) no-repeat center center rgba(0, 0, 0, 0.6);
+        background-size: 24px;
+      }
+      .section06 .swiperbox .swiper-button-next {
+        right: 0;
+        width: 90px;
+        height: 160px;
+        margin-top: -80px;
+        background: url(images/btn_next_white.png) no-repeat center center rgba(0, 0, 0, 0.6);
+        background-size: 24px;
+      }
+      .section06 .swiperbox .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        bottom: -50px;
+        width: 100%;
+        line-height: 12px;
+      }
+      .section06 .swiperbox .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+        border: 1px solid #9fa0a0;
+        background: #fff;
+        opacity: 1;
+      }
+      .section06 .swiperbox .swiper-pagination-bullet-active {
+        background: #9fa0a0;
+      }
+      .section06 .art_center {
+        padding-top: 50px;
+      }
+      .section06 .in_tit {
+        width: 1125px;
+        margin: 0 auto;
+        padding: 22px 20px 20px;
+        border-radius: 20px;
+        background: #f8f1ea;
+        color: #000;
+        font-size: 32px;
+        line-height: 44px;
+        font-weight: 400;
+      }
+      .section06 .in_tit .ico_recycle {
+        display: inline-block;
+        width: 36px;
+        height: 44px;
+        margin-top: -2px;
+        background: url(images/ico_recycle.png) no-repeat center center;
+        background-size: 36px;
+        vertical-align: top;
+      }
+      .section06 .in_txt {
+        margin-top: 42px;
+        color: #ab8769;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+      .section06 .mapbox {
+        display: flex;
+        align-items: center;
+        width: 1220px;
+        margin: 44px auto 0;
+        padding: 50px;
+        background: #fff;
+        box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1);
+      }
+      .section06 .mapbox .map_div {
+        width: 597px;
+        height: 285px;
+      }
+      .section06 .mapbox .map_div .root_daum_roughmap {
+        border-bottom: 1px solid #dfdfdf;
+      }
+      .section06 .mapbox .map_div .root_daum_roughmap .wrap_map {
+        height: 285px;
+      }
+      .section06 .mapbox .map_div .root_daum_roughmap .wrap_controllers {
+        display: none;
+      }
+      .section06 .mapbox .map_txtbox {
+        flex: 1;
+        margin-left: 50px;
+        text-align: left;
+      }
+      .section06 .mapbox .map_txtbox .map_tit {
+        color: #000;
+        font-size: 32px;
+        line-height: 30px;
+        font-weight: 700;
+      }
+      .section06 .mapbox .map_txtbox .map_txt {
+        margin-top: 20px;
+        color: #000;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+
+      .section07 {
+        position: relative;
+        padding: 94px 0 125px;
+        background: #f8f6e8;
+        overflow: hidden;
+      }
+      .section07::before {
+        content: '';
+        position: absolute;
+        top: 53px;
+        left: 50%;
+        width: 151px;
+        height: 96px;
+        margin-left: 354px;
+        background: url(images/section07_bg01.png) no-repeat center center;
+        background-size: contain;
+      }
+      .section07::after {
+        content: '';
+        position: absolute;
+        bottom: -62px;
+        left: 50%;
+        width: 353px;
+        height: 243px;
+        margin-left: 428px;
+        background: url(images/section07_bg02.png) no-repeat center center;
+        background-size: contain;
+      }
+      .section07 .box_inner {
+        position: relative;
+        z-index: 2;
+      }
+      .section07 .tit {
+        color: #546223;
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+      .section07 .txt {
+        margin-top: 26px;
+        color: #696969;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+
+      .section08 {
+        padding: 88px 0 150px;
+        background: #fff;
+      }
+      .section08 .tit {
+        color: #000;
+        font-size: 48px;
+        line-height: 60px;
+        font-weight: 700;
+      }
+      .section08 .tit .lucas_size {
+        font-size: 58px;
+      }
+      .section08 .tit + .txt {
+        margin-top: 30px;
+      }
+      .section08 .txt {
+        margin-top: 63px;
+        color: #696969;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+      .section08 .diy_step {
+        display: flex;
+        margin-top: 40px;
+      }
+      .section08 .diy_step li {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 290px;
+        background: #696969;
+        color: #fff;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 700;
+      }
+      .section08 .diy_step.brown li {
+        background: #cac3b9;
+      }
+      .section08 .diy_step.khaki li {
+        background: #b6b8a8;
+      }
+      .section08 .diy_step li + li {
+        margin-left: 20px;
+      }
+      .section08 .diy_step li::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        width: 52px;
+        height: 62px;
+        margin-top: -31px;
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        background-size: contain;
+        z-index: 1;
+      }
+      .section08 .diy_step li:last-child:before {
+        display: none;
+      }
+      .section08 .diy_step.brown li::before {
+        background-image: url(images/ico_step_arrow_brown.png);
+      }
+      .section08 .diy_step.khaki li::before {
+        background-image: url(images/ico_step_arrow_khaki.png);
+      }
+
+      .section09 {
+        padding: 100px 0;
+        background: #faf9f8;
+      }
+      .section09 .box_inner {
+        display: flex;
+        align-items: center;
+      }
+      .section09 .imgbox {
+        position: relative;
+        width: 523px;
+        height: 523px;
+      }
+      .section09 .imgbox .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      .section09 .txtbox {
+        flex: 1;
+        margin-left: 50px;
+        text-align: left;
+      }
+      .section09 .txtbox .tit {
+        color: #000;
+        font-size: 45px;
+        line-height: 58px;
+        font-weight: 700;
+      }
+      .section09 .txtbox .txt {
+        position: relative;
+        margin-top: 34px;
+        color: #696969;
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: 400;
+      }
+      .section09 .txtbox .txt::before {
+        content: '';
+        position: absolute;
+        top: 175px;
+        left: 0;
+        width: 600px;
+        height: 1px;
+        background: #1b120e;
+      }
+      .section09 .txtbox .txt strong {
+        font-weight: 700;
+      }
+
+      @media screen and (max-width: 1280px) {
+        .box_inner {
+          width: 95.312vw;
+        }
+
+        .visual {
+          height: 64.062vw;
+        }
+        .visual .in_logo {
+          top: 3.359vw;
+          left: 3.046vw;
+          width: 14.14vw;
+          height: 2.5vw;
+        }
+        .visual .video_box {
+          width: 48.984vw;
+          height: 40vw;
+        }
+        .visual .txtbox {
+          margin-left: 3.7vw;
+        }
+        .visual .txtbox .tit {
+          font-size: 3.7vw;
+          line-height: 4.687vw;
+        }
+        .visual .txtbox .txt {
+          margin-top: 2.656vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+
+        .section01 {
+          padding: 7.812vw 0 10.703vw;
+        }
+        .section01 .stit {
+          height: 4.765vw;
+          padding: 0.312vw 1.25vw 0;
+          font-size: 2.812vw;
+          line-height: 4.687vw;
+        }
+        .section01 .tit {
+          margin-top: 0.859vw;
+          font-size: 3.75vw;
+          line-height: 5.468vw;
+        }
+        .section01 .tit_p {
+          margin-top: 2.734vw;
+          padding-top: 3.515vw;
+          font-size: 2.734vw;
+          line-height: 3.671vw;
+        }
+        .section01 .tit_p::before {
+          width: 5.78vw;
+          margin-left: -2.89vw;
+        }
+        .section01 .txt {
+          margin-top: 2.734vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section01 .imgbox {
+          width: 22.5vw;
+          height: 19.921vw;
+          margin-top: 4.687vw;
+        }
+        .section01 .icobox {
+          margin-top: 4.687vw;
+        }
+        .section01 .icobox li {
+          width: 14.843vw;
+        }
+        .section01 .icobox li .ico {
+          width: 6.25vw;
+          height: 6.25vw;
+        }
+        .section01 .icobox li .txt {
+          font-size: 1.875vw;
+          line-height: 3.75vw;
+        }
+
+        .section02 {
+          padding: 7.812vw 0 11.718vw;
+        }
+        .section02 .stit {
+          height: 4.765vw;
+          padding: 0.312vw 1.25vw 0;
+          font-size: 2.812vw;
+          line-height: 4.687vw;
+        }
+        .section02 .tit {
+          margin-top: 0.859vw;
+          font-size: 3.75vw;
+          line-height: 5.468vw;
+        }
+        .section02 .txt {
+          margin-top: 2.734vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section02 .swiperbox {
+          margin: 3.125vw auto 3.906vw;
+        }
+        .section02 .swiperbox .swiper-container {
+          width: 57.031vw;
+          height: 37.031vw;
+        }
+        .section02 .swiperbox .swiper-slide {
+          padding: 0 0.781vw;
+        }
+        .section02 .swiperbox .imgbox {
+          width: 30.781vw;
+          height: 20.546vw;
+        }
+        .section02 .swiperbox .swiper-slide-active .imgbox {
+          width: 55.468vw;
+          height: 37.031vw;
+        }
+        .section02 .swiperbox .swiper-button-prev {
+          width: 7.031vw;
+          height: 12.5vw;
+          margin-top: -6.25vw;
+          background-size: 1.875vw;
+        }
+        .section02 .swiperbox .swiper-button-next {
+          width: 7.031vw;
+          height: 12.5vw;
+          margin-top: -6.25vw;
+          background-size: 1.875vw;
+        }
+        .section02 .swiperbox .swiper-pagination {
+          bottom: -50px;
+          width: 100%;
+          line-height: 12px;
+        }
+        .section02 .swiperbox .swiper-pagination-bullet {
+          width: 0.937vw;
+          height: 0.937vw;
+          margin: 0 0.468vw;
+        }
+
+        .section03 {
+          padding: 6.875vw 0 11.718vw;
+        }
+        .section03 .txtbox {
+          padding-top: 6.015vw;
+        }
+        .section03 .txtbox .tit {
+          font-size: 3.75vw;
+          line-height: 4.687vw;
+        }
+        .section03 .txtbox .tit .lucas_size {
+          font-size: 4.531vw;
+        }
+        .section03 .txtbox .txt {
+          margin-top: 2.656vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section03 .imgbox {
+          width: 52.031vw;
+          height: 47.5vw;
+        }
+
+        .section04 {
+          padding: 11.718vw 0;
+        }
+        .section04 .imgbox {
+          width: 41.64vw;
+          height: 41.64vw;
+        }
+        .section04 .imgbox::before {
+          top: -4.375vw;
+          left: -4.375vw;
+          width: 29.687vw;
+          height: 49.843vw;
+        }
+        .section04 .txtbox {
+          margin-left: 6.25vw;
+        }
+        .section04 .txtbox .tit {
+          font-size: 3.75vw;
+          line-height: 3.437vw;
+        }
+        .section04 .txtbox .txt {
+          margin-top: 3.359vw;
+          padding-left: 2.343vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section04 .txtbox .btn {
+          width: 28.437vw;
+          height: 4.687vw;
+          margin-top: 1.406vw;
+          padding-top: 0.234vw;
+          padding-right: 1.875vw;
+          border-radius: 0.39vw;
+          background-position: right 1.328vw center;
+          background-size: 2.031vw;
+          font-size: 1.562vw;
+          line-height: 2.343vw;
+        }
+        .section04 .txtbox .cs_txt {
+          margin-top: 2.343vw;
+          font-size: 1.562vw;
+          line-height: 2.812vw;
+        }
+        .section04 .txtbox .cs_tel {
+          height: 3.906vw;
+          margin-top: 1.562vw;
+          padding-left: 8.437vw;
+          background-position: 2.656vw center;
+          background-size: 1.875vw;
+        }
+        .section04 .txtbox .cs_tel::before {
+          left: 6.64vw;
+        }
+        .section04 .txtbox .cs_tel dt,
+        .section04 .txtbox .cs_tel dd {
+          font-size: 1.406vw;
+          line-height: 1.953vw;
+        }
+
+        .section05 {
+          padding: 6.875vw 0 11.718vw;
+        }
+        .section05 .tit {
+          font-size: 3.75vw;
+          line-height: 4.687vw;
+        }
+        .section05 .tit .lucas_size {
+          font-size: 4.531vw;
+        }
+        .section05 .tit .ico_recycle {
+          width: 4.531vw;
+          height: 4.687vw;
+          background-size: 4.531vw;
+        }
+        .section05 .txt {
+          margin-top: 2.343vw;
+          padding-bottom: 1.875vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section05 .itembox {
+          margin-top: 2.343vw;
+          padding: 5.468vw 5.468vw 5.468vw 6.25vw;
+        }
+        .section05 .itembox01 .in_txtbox .in_stit {
+          font-size: 3.515vw;
+          line-height: 4.531vw;
+        }
+        .section05 .itembox01 .in_txtbox .in_tit {
+          margin-top: 2.734vw;
+          font-size: 2.734vw;
+          line-height: 2.578vw;
+        }
+        .section05 .itembox01 .in_txtbox .in_txt {
+          margin-top: 3.125vw;
+          font-size: 1.64vw;
+          line-height: 2.578vw;
+        }
+        .section05 .itembox01 .in_imgbox {
+          width: 47.656vw;
+          height: 39.14vw;
+        }
+
+        .section05 .itembox02 .in_imgbox {
+          width: 39.062vw;
+          height: 34.296vw;
+        }
+        .section05 .itembox02 .in_txtbox {
+          margin-left: 3.906vw;
+        }
+        .section05 .itembox02 .in_txtbox .in_tit {
+          font-size: 2.5vw;
+          line-height: 3.281vw;
+        }
+        .section05 .itembox02 .in_txtbox .in_tit::before {
+          width: 20vw;
+          margin: -0.312vw 0 0 1.406vw;
+        }
+        .section05 .itembox02 .in_txtbox .in_txt {
+          margin-top: 2.812vw;
+          font-size: 1.406vw;
+          line-height: 2.343vw;
+        }
+        .section05 .itembox02 .in_txtbox .in_stit {
+          margin-top: 1.25vw;
+          font-size: 2.109vw;
+          line-height: 3.046vw;
+        }
+        .section05 .itembox02 .in_historybox {
+          margin-top: 2.343vw;
+          padding: 0 2.656vw;
+        }
+        .section05 .itembox02 .in_history {
+          padding: 0 1.25vw;
+        }
+        .section05 .itembox02 .in_history .in_history_tit {
+          height: 3.125vw;
+          margin-top: 0.234vw;
+          padding-top: 0.156vw;
+          font-size: 1.875vw;
+          line-height: 3.125vw;
+        }
+        .section05 .itembox02 .in_history .in_history_list {
+          padding: 1.171vw 1.171vw 0;
+        }
+        .section05 .itembox02 .in_history .in_history_list li {
+          padding-left: 3.75vw;
+          font-size: 1.64vw;
+          line-height: 2.578vw;
+        }
+        .section05 .itembox02 .in_history + .in_history {
+          width: 52.734vw;
+        }
+
+        .section06 {
+          padding: 6.875vw 0 11.718vw;
+        }
+        .section06 .tit {
+          font-size: 3.75vw;
+          line-height: 4.687vw;
+        }
+        .section06 .tit .lucas_size {
+          font-size: 4.531vw;
+        }
+        .section06 .swiperbox {
+          margin: 5vw auto 3.906vw;
+        }
+        .section06 .swiperbox .swiper-container {
+          width: 57.031vw;
+          height: 37.031vw;
+        }
+        .section06 .swiperbox .swiper-slide {
+          padding: 0 0.781vw;
+        }
+        .section06 .swiperbox .imgbox {
+          width: 30.781vw;
+          height: 20.546vw;
+        }
+        .section06 .swiperbox .swiper-slide-active .imgbox {
+          width: 55.468vw;
+          height: 37.031vw;
+        }
+        .section06 .swiperbox .swiper-button-prev {
+          width: 7.031vw;
+          height: 12.5vw;
+          margin-top: -6.25vw;
+          background-size: 1.875vw;
+        }
+        .section06 .swiperbox .swiper-button-next {
+          width: 7.031vw;
+          height: 12.5vw;
+          margin-top: -6.25vw;
+          background-size: 1.875vw;
+        }
+        .section06 .swiperbox .swiper-pagination {
+          bottom: -50px;
+          width: 100%;
+          line-height: 12px;
+        }
+        .section06 .swiperbox .swiper-pagination-bullet {
+          width: 0.937vw;
+          height: 0.937vw;
+          margin: 0 0.468vw;
+        }
+        .section06 .art_center {
+          padding-top: 3.906vw;
+        }
+        .section06 .in_tit {
+          width: 87.89vw;
+          padding: 1.718vw 1.562vw 1.562vw;
+          border-radius: 1.562vw;
+          font-size: 2.5vw;
+          line-height: 3.437vw;
+        }
+        .section06 .in_tit .ico_recycle {
+          width: 2.812vw;
+          height: 3.437vw;
+          margin-top: -0.156vw;
+          background-size: 2.812vw;
+        }
+        .section06 .in_txt {
+          margin-top: 3.281vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section06 .mapbox {
+          width: 95.312vw;
+          margin: 3.437vw auto 0;
+          padding: 3.906vw;
+        }
+        .section06 .mapbox .map_div {
+          width: 46.64vw;
+          height: 22.265vw;
+        }
+        .section06 .mapbox .map_div .root_daum_roughmap {
+          width: 46.64vw !important;
+          height: 22.265vw !important;
+        }
+        .section06 .mapbox .map_div .root_daum_roughmap .wrap_map {
+          height: 22.265vw !important;
+        }
+        .section06 .mapbox .map_txtbox {
+          margin-left: 3.906vw;
+        }
+        .section06 .mapbox .map_txtbox .map_tit {
+          font-size: 2.5vw;
+          line-height: 2.343vw;
+        }
+        .section06 .mapbox .map_txtbox .map_txt {
+          margin-top: 1.562vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+
+        .section07 {
+          padding: 7.343vw 0 9.765vw;
+        }
+        .section07::before {
+          top: 4.14vw;
+          width: 11.796vw;
+          height: 7.5vw;
+          margin-left: 27.656vw;
+        }
+        .section07::after {
+          bottom: -4.843vw;
+          width: 27.578vw;
+          height: 18.984vw;
+          margin-left: 33.437vw;
+        }
+        .section07 .tit {
+          font-size: 3.75vw;
+          line-height: 4.687vw;
+        }
+        .section07 .txt {
+          margin-top: 2.031vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+
+        .section08 {
+          padding: 6.875vw 0 11.718vw;
+        }
+        .section08 .tit {
+          font-size: 3.75vw;
+          line-height: 4.687vw;
+        }
+        .section08 .tit .lucas_size {
+          font-size: 4.531vw;
+        }
+        .section08 .tit + .txt {
+          margin-top: 2.343vw;
+        }
+        .section08 .txt {
+          margin-top: 4.921vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section08 .diy_step {
+          margin-top: 3.125vw;
+        }
+        .section08 .diy_step li {
+          height: 22.656vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section08 .diy_step li + li {
+          margin-left: 1.562vw;
+        }
+        .section08 .diy_step li::before {
+          width: 3.84vw;
+          height: 4.6vw;
+          margin-top: -2.3vw;
+        }
+
+        .section09 {
+          padding: 7.812vw 0;
+        }
+        .section09 .imgbox {
+          width: 40.859vw;
+          height: 40.859vw;
+        }
+        .section09 .txtbox {
+          margin-left: 3.906vw;
+        }
+        .section09 .txtbox .tit {
+          font-size: 3.515vw;
+          line-height: 4.531vw;
+        }
+        .section09 .txtbox .txt {
+          margin-top: 2.656vw;
+          font-size: 1.875vw;
+          line-height: 2.812vw;
+        }
+        .section09 .txtbox .txt::before {
+          top: 13.671vw;
+          width: 46.875vw;
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        .br_m {
+          display: block;
+          width: 100%;
+        }
+        .m_none {
+          display: none !important;
+        }
+
+        .box_inner {
+          width: 100%;
+          padding: 0 3.75vw;
+        }
+
+        .visual {
+          height: auto;
+          padding: 14.583vw 0 20.833vw;
+        }
+        .visual .in_logo {
+          display: none;
+        }
+        .visual .box_inner {
+          flex-direction: column;
+        }
+        .visual .video_box {
+          order: 1;
+          width: 100%;
+          height: 0;
+          margin-top: 6.041vw;
+          padding-bottom: 81.66%;
+        }
+        .visual .txtbox {
+          order: 0;
+          margin-left: 0;
+          text-align: center;
+        }
+        .visual .txtbox .tit {
+          font-size: 7.291vw;
+          line-height: 8.75vw;
+        }
+        .visual .txtbox .txt {
+          margin-top: 5.104vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+
+        .section01 {
+          padding: 11.666vw 0 13.75vw;
+        }
+        .section01 .stit {
+          height: 8.333vw;
+          padding: 0.625vw 2.291vw 0;
+          font-size: 4.791vw;
+          line-height: 7.708vw;
+        }
+        .section01 .tit {
+          margin-top: 3.125vw;
+          font-size: 7.291vw;
+          line-height: 7.291vw;
+        }
+        .section01 .tit_p {
+          margin-top: 4.791vw;
+          padding-top: 4.166vw;
+          font-size: 5.208vw;
+          line-height: 7.5vw;
+        }
+        .section01 .tit_p::before {
+          width: 7.708vw;
+          margin-left: -3.854vw;
+        }
+        .section01 .txt {
+          margin-top: 5.625vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+        .section01 .imgbox {
+          width: 30vw;
+          height: 26.562vw;
+          margin-top: 6.25vw;
+        }
+        .section01 .icobox {
+          margin-top: 4.791vw;
+        }
+        .section01 .icobox li {
+          width: 25vw;
+        }
+        .section01 .icobox li .ico {
+          width: 10.416vw;
+          height: 10.416vw;
+        }
+        .section01 .icobox li .txt {
+          font-size: 3.125vw;
+          line-height: 6.25vw;
+        }
+
+        .section02 {
+          padding: 15.625vw 0 13.75vw;
+          background: #fff;
+          overflow: hidden;
+        }
+        .section02 .stit {
+          height: 8.333vw;
+          padding: 0.625vw 2.291vw 0;
+          font-size: 4.791vw;
+          line-height: 7.708vw;
+        }
+        .section02 .tit {
+          margin-top: 3.125vw;
+          font-size: 7.291vw;
+          line-height: 7.291vw;
+        }
+        .section02 .txt {
+          margin-top: 5.625vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+        .section02 .swiperbox {
+          margin: 5.937vw auto 7.5vw;
+        }
+        .section02 .swiperbox .swiper-container {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+        }
+        .section02 .swiperbox .swiper-slide {
+          width: 100%;
+          padding: 0 4.166vw;
+        }
+        .section02 .swiperbox .imgbox {
+          width: 100%;
+          height: 0;
+          padding-bottom: 66.74%;
+          transition: 0s;
+        }
+        .section02 .swiperbox .swiper-slide-active .imgbox {
+          width: 100%;
+          height: 0;
+        }
+        .section02 .swiperbox .swiper-button-prev {
+          width: 9.375vw;
+          height: 16.666vw;
+          margin-top: -8.333vw;
+          background-size: 2.5vw;
+        }
+        .section02 .swiperbox .swiper-button-next {
+          width: 9.375vw;
+          height: 16.666vw;
+          margin-top: -8.333vw;
+          background-size: 2.5vw;
+        }
+        .section02 .swiperbox .swiper-pagination {
+          bottom: -7.5vw;
+          line-height: 2.5vw;
+        }
+        .section02 .swiperbox .swiper-pagination-bullet {
+          width: 2.5vw;
+          height: 2.5vw;
+          margin: 0 1.25vw;
+        }
+
+        .section03 {
+          padding: 14.583vw 0 15.625vw;
+        }
+        .section03 .box_inner {
+          flex-direction: column;
+        }
+        .section03 .txtbox {
+          padding-top: 0;
+          text-align: center;
+        }
+        .section03 .txtbox .tit {
+          font-size: 7.291vw;
+          line-height: 8.75vw;
+        }
+        .section03 .txtbox .tit .lucas_size {
+          font-size: 8.333vw;
+        }
+        .section03 .txtbox .txt {
+          margin-top: 5vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+          font-weight: 400;
+        }
+        .section03 .imgbox {
+          flex: none;
+          width: 69.375vw;
+          height: 63.333vw;
+          margin: 8.958vw auto 0;
+        }
+
+        .section04 {
+          padding: 15.625vw 0;
+        }
+        .section04 .box_inner {
+          flex-direction: column;
+        }
+        .section04 .imgbox {
+          order: 1;
+          flex: none;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+          margin-top: 6.25vw;
+        }
+        .section04 .imgbox::before {
+          display: none;
+        }
+        .section04 .txtbox {
+          order: 0;
+          margin-left: 0;
+          text-align: center;
+        }
+        .section04 .txtbox .tit {
+          font-size: 7.291vw;
+          line-height: 6.458vw;
+        }
+        .section04 .txtbox .txt {
+          margin-top: 9.583vw;
+          padding-left: 0;
+          font-size: 3.75vw;
+          line-height: 5vw;
+        }
+        .section04 .txtbox .txt .num {
+          position: static;
+        }
+        .section04 .txtbox .btn {
+          width: 56.875vw;
+          height: 9.375vw;
+          margin: 2.187vw auto 0;
+          padding-top: 0.625vw;
+          padding-right: 3.541vw;
+          border-radius: 0.625vw;
+          background-position: right 2.604vw center;
+          background-size: 4.062vw;
+          font-size: 3.125vw;
+          line-height: 8.541vw;
+        }
+        .section04 .txtbox .cs_txt {
+          margin-top: 6.562vw;
+          font-size: 2.5vw;
+          line-height: 3.75vw;
+        }
+        .section04 .txtbox .cs_tel {
+          height: 7.812vw;
+          margin-top: 3.75vw;
+          padding-left: 8.645vw;
+          background-position: 0 center;
+          background-size: 3.854vw;
+        }
+        .section04 .txtbox .cs_tel::before {
+          left: 6.25vw;
+        }
+        .section04 .txtbox .cs_tel dt,
+        .section04 .txtbox .cs_tel dd {
+          font-size: 3.125vw;
+          line-height: 3.906vw;
+        }
+
+        .section05 {
+          padding: 14.375vw 0 15.625vw;
+          background: #f1ede2;
+        }
+        .section05 .tit {
+          font-size: 7.291vw;
+          line-height: 8.75vw;
+        }
+        .section05 .tit .lucas_size {
+          font-size: 8.333vw;
+        }
+        .section05 .tit .ico_recycle {
+          width: 8.645vw;
+          height: 8.75vw;
+          background-size: 8.645vw;
+        }
+        .section05 .txt {
+          margin-top: 5vw;
+          padding-bottom: 0.625vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+          white-space: nowrap;
+        }
+        .section05 .itembox {
+          margin-top: 5.208vw;
+        }
+        .section05 .itembox01 {
+          padding: 8.75vw 4.687vw 12.5vw;
+        }
+        .section05 .itembox01 .in_txtbox {
+          order: 1;
+          flex: auto;
+          text-align: center;
+        }
+        .section05 .itembox01 .in_txtbox .in_stit {
+          margin-top: 6.25vw;
+          color: #696969;
+          font-size: 7.291vw;
+          line-height: 8.75vw;
+        }
+        .section05 .itembox01 .in_txtbox .in_tit {
+          margin-top: 4.166vw;
+          color: #696969;
+          font-size: 5.208vw;
+          line-height: 6.666vw;
+        }
+        .section05 .itembox01 .in_txtbox .in_txt {
+          margin-top: 6.041vw;
+          color: #696969;
+          font-size: 3.75vw;
+          line-height: 5vw;
+        }
+        .section05 .itembox01 .in_imgbox {
+          order: 0;
+          width: 63.541vw;
+          height: 52.187vw;
+          margin: 0 auto;
+        }
+
+        .section05 .itembox02 {
+          padding: 5vw 4.687vw 8.75vw;
+        }
+        .section05 .itembox02 .in_imgbox {
+          order: 0;
+          width: 100%;
+          height: 0;
+          padding-bottom: 87.8%;
+        }
+        .section05 .itembox02 .in_txtbox {
+          order: 1;
+          flex: auto;
+          margin: 6.25vw 0 0 0;
+        }
+        .section05 .itembox02 .in_txtbox .in_tit {
+          color: #696969;
+          font-size: 5.208vw;
+          line-height: 6.666vw;
+        }
+        .section05 .itembox02 .in_txtbox .in_tit::before {
+          width: 43.125vw;
+          margin: -0.625vw 0 0 3.541vw;
+        }
+        .section05 .itembox02 .in_txtbox .in_txt {
+          margin-top: 2.916vw;
+          color: #696969;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+          word-break: break-all;
+        }
+        .section05 .itembox02 .in_txtbox .in_stit {
+          margin-top: 2.5vw;
+          color: #696969;
+          font-size: 5.208vw;
+          line-height: 7.5vw;
+        }
+        .section05 .itembox02 .in_historybox {
+          order: 2;
+          flex-direction: column;
+          margin-top: 0;
+          padding: 0;
+        }
+        .section05 .itembox02 .in_history {
+          flex: none;
+          width: 100%;
+          padding: 0;
+        }
+        .section05 .itembox02 .in_history .in_history_tit {
+          height: 8.333vw;
+          margin-top: 5.729vw;
+          padding-top: 0.625vw;
+          font-size: 3.75vw;
+          line-height: 7.708vw;
+        }
+        .section05 .itembox02 .in_history .in_history_list {
+          padding: 5vw 0 0;
+        }
+        .section05 .itembox02 .in_history .in_history_list li {
+          padding-left: 8.62vw;
+          color: #696969;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+        .section05 .itembox02 .in_history + .in_history {
+          width: 100%;
+          border-left: none;
+        }
+
+        .section06 {
+          padding: 18.75vw 0 15.625vw;
+        }
+        .section06 .tit {
+          font-size: 7.291vw;
+          line-height: 8.75vw;
+        }
+        .section06 .tit .lucas_size {
+          font-size: 8.333vw;
+        }
+        .section06 .swiperbox {
+          margin: 6.25vw auto 7.5vw;
+        }
+        .section06 .swiperbox .swiper-container {
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+        }
+        .section06 .swiperbox .swiper-slide {
+          width: 100%;
+          padding: 0 4.166vw;
+        }
+        .section06 .swiperbox .imgbox {
+          width: 100%;
+          height: 0;
+          padding-bottom: 66.74%;
+          transition: 0s;
+        }
+        .section06 .swiperbox .swiper-slide-active .imgbox {
+          width: 100%;
+          height: 0;
+        }
+        .section06 .swiperbox .swiper-button-prev {
+          width: 9.375vw;
+          height: 16.666vw;
+          margin-top: -8.333vw;
+          background-size: 2.5vw;
+        }
+        .section06 .swiperbox .swiper-button-next {
+          width: 9.375vw;
+          height: 16.666vw;
+          margin-top: -8.333vw;
+          background-size: 2.5vw;
+        }
+        .section06 .swiperbox .swiper-pagination {
+          bottom: -7.5vw;
+          line-height: 2.5vw;
+        }
+        .section06 .swiperbox .swiper-pagination-bullet {
+          width: 2.5vw;
+          height: 2.5vw;
+          margin: 0 1.25vw;
+        }
+
+        .section06 .art_center {
+          padding-top: 6.25vw;
+        }
+        .section06 .in_tit {
+          width: 100%;
+          padding: 0;
+          border-radius: 0;
+          background: none;
+          font-size: 5.208vw;
+          line-height: 7.5vw;
+        }
+        .section06 .in_tit .ico_recycle {
+          width: 5.625vw;
+          height: 7.5vw;
+          margin-top: -0.625vw;
+          background-size: 5.625vw;
+        }
+        .section06 .in_txt {
+          margin-top: 4.375vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+        .section06 .mapbox {
+          flex-direction: column;
+          width: 100%;
+          margin: 5.833vw auto 0;
+          padding: 5vw;
+        }
+        .section06 .mapbox .map_div {
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-bottom: 60%;
+        }
+        .section06 .mapbox .map_div .root_daum_roughmap {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100% !important;
+          height: 100% !important;
+        }
+        .section06 .mapbox .map_div .root_daum_roughmap .wrap_map {
+          width: 100% !important;
+          height: 100% !important;
+        }
+        .section06 .mapbox .map_txtbox {
+          flex: none;
+          width: 100%;
+          margin: 6.25vw 0 0 0;
+          padding: 0 7.5vw;
+          text-align: left;
+        }
+        .section06 .mapbox .map_txtbox .map_tit {
+          font-size: 5.208vw;
+          line-height: 6.458vw;
+        }
+        .section06 .mapbox .map_txtbox .map_txt {
+          margin-top: 2.5vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+
+        .section07 {
+          padding: 14.68vw 0 19.375vw;
+        }
+        .section07::before {
+          top: 28.854vw;
+          width: 15.729vw;
+          height: 10vw;
+          margin-left: -47.708vw;
+        }
+        .section07::after {
+          bottom: -4.166vw;
+          width: 36.77vw;
+          height: 25.312vw;
+          margin-left: 19.583vw;
+        }
+        .section07 .tit {
+          font-size: 7.291vw;
+          line-height: 8.75vw;
+        }
+        .section07 .txt {
+          margin-top: 5vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+
+        .section08 {
+          padding: 14.895vw 0 15.625vw;
+        }
+        .section08 .tit {
+          font-size: 7.291vw;
+          line-height: 7.083vw;
+        }
+        .section08 .tit .lucas_size {
+          font-size: 8.333vw;
+        }
+        .section08 .tit + .txt {
+          margin-top: 5vw;
+        }
+        .section08 .txt {
+          margin-top: 8.75vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+        .section08 .diy_step {
+          flex-wrap: wrap;
+          width: calc(100% + 3.125vw);
+          margin-top: 2.5vw;
+          margin-left: -3.125vw;
+        }
+        .section08 .diy_step li {
+          flex: none;
+          width: 50%;
+          height: 44.062vw;
+          border-top: 3.125vw solid #fff;
+          border-left: 3.125vw solid #fff;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+        .section08 .diy_step li + li {
+          margin-left: 0;
+        }
+        .section08 .diy_step li:nth-child(1) {
+          order: 1;
+        }
+        .section08 .diy_step li:nth-child(2) {
+          order: 2;
+        }
+        .section08 .diy_step li:nth-child(3) {
+          order: 4;
+        }
+        .section08 .diy_step li:nth-child(4) {
+          order: 3;
+        }
+        .section08 .diy_step li::before {
+          top: auto;
+          right: auto;
+          bottom: auto;
+          left: auto;
+          width: 7.708vw;
+          height: 9.48vw;
+          margin: 0;
+          background-position: 0 0;
+          transform-origin: 0 0;
+        }
+        .section08 .diy_step li:nth-child(1):before {
+          top: 50%;
+          left: 100%;
+          margin-top: -4.74vw;
+        }
+        .section08 .diy_step li:nth-child(2):before {
+          top: 100%;
+          left: 50%;
+          margin-left: 3.854vw;
+          transform: rotate(90deg);
+        }
+        .section08 .diy_step li:nth-child(3):before {
+          top: 50%;
+          left: 0;
+          margin-top: 4.74vw;
+          transform: rotate(180deg);
+        }
+        .section08 .diy_step li:last-child:before {
+          display: none;
+        }
+
+        .section09 {
+          padding: 14.8vw 0;
+        }
+        .section09 .box_inner {
+          flex-direction: column;
+        }
+        .section09 .imgbox {
+          order: 1;
+          width: 100%;
+          height: 0;
+          margin-top: 5.937vw;
+          padding-bottom: 58%;
+        }
+        .section09 .txtbox {
+          order: 0;
+          flex: none;
+          width: 100%;
+          margin-left: 0;
+          text-align: center;
+        }
+        .section09 .txtbox .tit {
+          font-size: 7.291vw;
+          line-height: 8.75vw;
+        }
+        .section09 .txtbox .txt {
+          margin-top: 4.375vw;
+          font-size: 3.75vw;
+          line-height: 6.041vw;
+        }
+        .section09 .txtbox .txt::before {
+          top: 30vw;
+          width: 100%;
+        }
+      }
+    </style>
+    <!--// style -->
+  </head>
+  <script>
+    let messages = {
+      ko: {},
+      en: {},
+    };
+  </script>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH9FPVL" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <h1 id="hidden-main-heading" class="visually-hidden" tabindex="-1">네스프레소</h1>
+    <!--
+        1. img loading="lazy" 
+        2. slick lazyload 속성 추가 
+    -->
+    <script>
+      let lang = $('html').attr('lang');
+    </script>
+    <div id="app" :class="$i18n.locale">
+      <!-- sus -->
+      <!-- sus -->
+      <!-- sus -->
+      <div id="sus_wrap">
+        <!-- visual -->
+        <div class="visual">
+          <h1 class="in_logo"><a href="#">NESPRESSO</a></h1>
+          <div class="box_inner">
+            <div class="video_box">
+              <iframe width="627" height="512" src="https://www.youtube.com/embed/c45F8w9C--I" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="txtbox">
+              <p class="tit">
+                커피 한 잔이 <br />
+                예술 작품으로 태어나는<br />
+                선한 영향력에 동참해 주세요
+              </p>
+              <p class="txt">
+                네스프레소는 사용한 캡슐을 수거 해 재활용하고, <br />
+                새로운 삶을 만들어 주고 있습니다. <br />
+                알루미늄은 펜으로, 자전거로, 예술작품으로 <br />
+                커피 가루는 비료, 화분으로 다시 태어나고 있죠.<br />
+                선순환을 만드는 커피의 선한 영향력이 우리의 일상에 <br />
+                어떤 영감을 줄지 궁금하다면, <br />
+                지금 당신도 재활용에 동참해 보세요.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--// visual -->
+        <!-- section01 -->
+        <div class="section01">
+          <div class="box_inner">
+            <p class="stit">지속 가능을 위한 <strong>첫번째 여정</strong></p>
+            <p class="tit">알루미늄 커피 캡슐</p>
+            <p class="tit_p">
+              알루미늄은 <br />
+              잊을 수 없는 커피의 맛과<br />
+              환경을 지키는<br />
+              최상의 소재입니다
+            </p>
+            <p class="txt">
+              알루미늄은 커피의 신선도와 아로마를 보존하는 <br class="br_m" />최상의 소재로 <br class="m_none" />
+              아로마의 품질을 떨어뜨리는 외부 요소인 <br class="br_m" />산소, 습도, 빛으로부터 완벽하게 커피를 지켜 <br />
+              언제나 최상의 커피 맛을 즐길 수 있게 해줍니다 <br />
+              또한 커피 추출 후에는 무한히 재활용이 가능하며, <br />
+              알루미늄 재활용은 새 알루미늄 생산에 비해 92%의 <br class="br_m" />에너지 사용과 95% 이산화탄소 발생을 줄입니다.
+            </p>
+            <div class="imgbox">
+              <div class="img" style="background-image: url(images/section01_img01.png)"></div>
+            </div>
+            <ul class="icobox">
+              <li>
+                <div class="ico" style="background-image: url(images/section01_ico01.png)"></div>
+                <p class="txt">산소</p>
+              </li>
+              <li>
+                <div class="ico" style="background-image: url(images/section01_ico02.png)"></div>
+                <p class="txt">습도</p>
+              </li>
+              <li>
+                <div class="ico" style="background-image: url(images/section01_ico03.png)"></div>
+                <p class="txt">빛</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--// section01 -->
+        <!-- section02 -->
+        <div class="section02">
+          <div class="box_inner">
+            <p class="stit">지속 가능을 위한 <strong>두번째 여정</strong></p>
+            <p class="tit">새로운 삶을 얻은 커피캡슐</p>
+            <p class="txt">
+              가장 사랑받는 네스프레소의 이스피라치오네 <br class="br_m" />피렌체 아르페지오 캡슐 300개를 업사이클링 해 탄생한<br />
+              벨로소피 자전거, 24개를 업사이클링해 만든 <br class="br_m" />빅토리녹스 나이프 등 <br class="m_none" />
+              다양한 제품이 새 삶을 얻어 <br class="br_m" />우리 생활에서 밀접하게 사용되고 있습니다.
+            </p>
+          </div>
+          <div class="swiperbox">
+            <div class="swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_01.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_01_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_02.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_02_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_03.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_03_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_04.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_04_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_05.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_05_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_06.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_06_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_07.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_07_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_08.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_08_off.jpg)"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <!--// section02 -->
+        <!-- section03 -->
+        <div class="section03">
+          <div class="box_inner">
+            <div class="txtbox">
+              <p class="tit">
+                네스프레소는 <span class="lucas_size">2011</span>년부터<br />
+                한국 소비자들이 마신 <br />
+                커피 캡슐을 직접 무상으로 <br />
+                회수하고 재활용하고<br />
+                있습니다.
+              </p>
+              <p class="txt">
+                이는 에너지와 자원을 절약하고<br />
+                폐기물 발생을 최소화하기 위한 네스프레소의 노력이며, <br />
+                커피 캡슐, 머신 및 포장재에 재활용 소재를 사용하여 <br />
+                더 적은 자원을 더 오래 사용하도록 설계된, <br />
+                보다 순환적인 모델을 향한 여정입니다.
+              </p>
+            </div>
+            <div class="imgbox">
+              <div class="img" style="background-image: url(images/section03_img01.png)">
+                <ol class="alt_text">
+                  <li>1. 사용한 캡슐 재활용 백에 담기</li>
+                  <li>2. 부티크 반납 또는 클럽/온라인/모바일 주문 시 재활용 백 수거 요청</li>
+                  <li>3. 캡슐은 사회적 기업과 함꼐 알루미늄과 커피 가루로 분리</li>
+                  <li>4. 알루미늄은 캔·자동차 부품 등으로 활용</li>
+                  <li>5. 커피 가루는 농장의 거름화로 재활용</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// section03 -->
+        <!-- section04 -->
+        <div class="section04">
+          <div class="box_inner">
+            <div class="imgbox">
+              <div class="img" style="background-image: url(images/section04_img01.jpg)"></div>
+            </div>
+            <div class="txtbox">
+              <p class="tit">네스프레소 재활용 참여방법</p>
+              <ol class="way_lsit">
+                <li>
+                  <p class="txt"><span class="num">① </span>부티크에 직접 방문하여 반납</p>
+                  <a href="#" class="btn">내 주변 가까운 부티크 매장 찾기</a>
+                </li>
+                <li>
+                  <p class="txt"><span class="num">② </span>커피 주문 시 재활용 백 수거를 신청하면 <br />택배 기사가 방문하여 회수</p>
+                  <a href="#" class="btn">재활용 백 주문 및 수거신청</a>
+                </li>
+              </ol>
+              <p class="cs_txt">* 재활용 참여 관련 문의는 고객센터로 연락바랍니다.</p>
+              <dl class="cs_tel">
+                <dt>클럽 전화</dt>
+                <dd>080 - 734 - 1111</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <!--// section04 -->
+        <!-- section05 -->
+        <div class="section05">
+          <div class="box_inner">
+            <p class="tit">
+              새 생 (生), <strong class="lucas_size">VITA NOVA</strong><br />
+              네스프레소 꽃이 피었습니다<br />
+              [<span class="lucas_size">NESPRESSO</span> <span class="ico_recycle"></span> 최정화 ]
+            </p>
+            <p class="txt">
+              네스프레소는 일상/아침을 함께하는 커피를 지키기 위해<br />
+              2011년부터 한국에서 커피 캡슐을 수거, 재활용하며 <br class="br_m" />자원의 선순환을 만들고 있습니다.<br />
+              네스프레소를 사랑하는 팬들과 최정화 작가가 함께 되살리는 <br />
+              네스프레소 알루미늄 캡슐을 작품으로 만나보세요.
+            </p>
+            <div class="itembox itembox01">
+              <div class="in_txtbox">
+                <p class="in_stit">“커피의 선한 영향력,<br />네스프레소에서 찾다”</p>
+                <p class="in_tit">커피 한 잔에 담긴 가치를..</p>
+                <p class="in_txt">
+                  네스프레소와 함께 작품 활동을 하는 이유,<br />
+                  소비자에게 전달하고 싶은 메시지 등을<br />
+                  작가님께 직접 받아 채울 예정
+                </p>
+              </div>
+              <div class="in_imgbox">
+                <div class="in_img" style="background-image: url(images/section05_img01.jpg)"></div>
+              </div>
+            </div>
+            <div class="itembox itembox02">
+              <div class="in_imgbox">
+                <div class="in_img" style="background-image: url(images/section05_img02.jpg)"></div>
+              </div>
+              <div class="in_txtbox">
+                <p class="in_tit">최정화 작가 소개</p>
+                <p class="in_txt">
+                  최정화는 플라스틱 바구니, 돼지저금통, 빗자루, 풍선 등 일상에서 소비되는 흔하고 저렴한 때로는 버려진 소모품을 활용하여 다양한 설치작품을 선보이는 작가이다. <br class="m_none" />
+                  일상에서 접할 수 있는 소비재를 예술작품으로 재탄생 시키는 그의 작업방식은 고급예술과 대중문화의 경계를 허물며 급속한 경제성장이 빚어낸 1990년대 이후 한국사회의 일면을 담아내며, 한국 현대미술의 지평을 확장하고 국제무대에서 지역성과 보편성을 담아내는 작가로 주목 받아왔다.
+                </p>
+                <p class="in_stit">홍익대학교 회화과 졸업</p>
+              </div>
+              <div class="in_historybox">
+                <div class="in_history">
+                  <p class="in_history_tit">수상</p>
+                  <ul class="in_history_list">
+                    <li><span class="year">2006</span> 올해의 예술상</li>
+                    <li><span class="year">1997</span> 제 5회 토탈미술상</li>
+                    <li><span class="year">1987</span> 중앙미술대전 대상</li>
+                    <li><span class="year">1987</span> 중앙미술대전 대상</li>
+                  </ul>
+                </div>
+                <div class="in_history">
+                  <p class="in_history_tit">개인전</p>
+                  <ul class="in_history_list">
+                    <li><span class="year">2022</span> Journey to Infinity, MCM, 서울, 한국</li>
+                    <li><span class="year">2022</span> 春夜(춘야), 운경고택(운경재단), 서울, 한국</li>
+                    <li><span class="year">2020</span> 살어리 살어리랏다, 경남 도립 미술관, 창원, 한국</li>
+                    <li><span class="year">2019</span> MMCA 개관 50주년<광장>2부, 국립현대미술관, 과천, 한국</li>
+                    <li><span class="year">2019</span> 최정화-잡화,아트스페이스 광교, 수원, 한국</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// section05 -->
+        <!-- section06 -->
+        <div class="section06">
+          <div class="box_inner">
+            <p class="tit">새 생 (生), <span class="lucas_size">VITA NOVA</span><br />#네스프레소가피었습니다</p>
+          </div>
+          <div class="swiperbox">
+            <div class="swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_01.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_01_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_02.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_02_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_03.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_03_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_04.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_04_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_05.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_05_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_06.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_06_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_07.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_07_off.jpg)"></div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="imgbox">
+                    <div class="img img_on" style="background-image: url(images/recycling_08.jpg)"></div>
+                    <div class="img img_off" style="background-image: url(images/recycling_08_off.jpg)"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="box_inner">
+            <div class="art_center">
+              <p class="in_tit">
+                [네스프레소 <span class="ico_recycle"></span> 최정화 작가] 전시회는 <br class="br_m" />12월 15일부터 학동역에 위치한<br />
+                ‘플랫폼엘 컨템포러리 아트센터’에서 <br class="br_m" />관람하실 수 있습니다.
+              </p>
+              <p class="in_txt">
+                새 생이 피어나는 전시회에서<br />
+                여러분의 손에서 꽃과 나비로 재탄생하는 커피 캡슐<br />
+                <br />
+                최정화 작가와 함께 만드는 네스프레소 꽃밭에 동참하여<br />
+                커피 캡슐로 직접 나만의 작품을 만들고,<br />
+                함께 만드는 정원에 꽃을 피워주세요.
+              </p>
+              <div class="mapbox">
+                <div class="map_div">
+                  <div id="daumRoughmapContainer1665406981685" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                </div>
+                <div class="map_txtbox">
+                  <p class="map_tit">플랫폼엘 컨템포러리 아트센터</p>
+                  <p class="map_txt">
+                    위치 : 서울특별시 강남구 언주로133길 11<br />
+                    전시 기간 : 22년 12월 14일 ~ 12월 22일<br />
+                    관람 시간 : 매일 오전 10시 ~ 오후 8시
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// section06 -->
+        <!-- section07 -->
+        <div class="section07">
+          <div class="box_inner">
+            <p class="tit">네스프레소 다시 꽃과 나비로</p>
+            <p class="txt">
+              네스프레소를 사랑하는 팬들과 함께 <br class="br_m" />꽃과 나비로 되살리는 알루미늄 캡슐.<br />
+              지금, 참여해주신 작품을 감상해보시고<br />
+              당신만의 꽃과 나비를 만들어 <br class="br_m" />네스프레소 다시 꽃과 나비로 로 공유해주세요.<br />
+              커피를 지키기 위한 네스프레소의 노력에 <br class="br_m" />당신도 함께 할 수 있습니다.
+            </p>
+          </div>
+        </div>
+        <!--// section07 -->
+        <!-- section08 -->
+        <div class="section08">
+          <div class="box_inner">
+            <p class="tit"><span class="lucas_size">DIY GUIDE</span></p>
+            <p class="txt">
+              네스프레소 알루미늄 캡슐만 있다면 <br class="br_m" />누구나 쉽게 따라하고 만들 수 있는 “네스프레소 꽃”<br />
+              아래 가이드를 보고 나만의 꽃을 만들어보세요.
+            </p>
+            <ol class="diy_step brown">
+              <li>① 알루미늄 캡슐<br />모으기</li>
+              <li>② 커피가루<br />분리하기</li>
+              <li>③ 캡슐을<br />평평하게 밀기</li>
+              <li>④ 6~8개의 꽃잎으로<br />이어붙이기</li>
+            </ol>
+            <p class="txt">
+              네스프레소 알루미늄 캡슐만 있다면 <br />누구나 쉽게 따라하고 만들 수 있는 “네스프레소 나비”<br />
+              아래 가이드를 보고 나만의 나비를 만들어보세요.
+            </p>
+            <ol class="diy_step khaki">
+              <li>① 알루미늄 캡슐<br />모으기</li>
+              <li>② 커피가루<br />분리하기</li>
+              <li>③ 캡슐을<br />평평하게 밀기</li>
+              <li>④ 6~8개의 꽃잎으로<br />이어붙이기</li>
+            </ol>
+          </div>
+        </div>
+        <!--// section08 -->
+        <!-- section09 -->
+        <div class="section09">
+          <div class="box_inner">
+            <div class="imgbox">
+              <div class="img" style="background-image: url(images/section09_img01.jpg)"></div>
+            </div>
+            <div class="txtbox">
+              <p class="tit">참여 방법</p>
+              <p class="txt">
+                직접 만든 꽃과 나비를 부티크에 재활용백과 함께 <br class="br_m" />가져오시면 <br class="m_none" />
+                네스프레소 커피 가루를 재활용해 만든<br />
+                <strong>‘네스프레소 홈 가드닝 키트’</strong>를 선물로 드립니다<br />
+                (선착순 1,000명) <br />
+                <br />
+                <br />
+                부티크에 가져다 주신 꽃과 나비는 <br class="br_m" />최정화 작가의 작품과 함께<br />
+                전시회에서 새로운 예술작품으로 탄생합니다!
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--// section09 -->
+      </div>
+      <!--// sus -->
+      <!--// sus -->
+      <!--// sus -->
+    </div>
+
+    <script>
+      $(function () {
+        $(function () {
+          var section02Swiper = new Swiper('.section02 .swiper-container', {
+            loop: true,
+            slidesPerView: 'auto',
+            observer: true,
+            observeParents: true,
+            navigation: {
+              nextEl: '.section02 .swiper-button-next',
+              prevEl: '.section02 .swiper-button-prev',
+            },
+            pagination: {
+              el: '.section02 .swiper-pagination',
+              clickable: true,
+            },
+          });
+
+          var section06Swiper = new Swiper('.section06 .swiper-container', {
+            loop: true,
+            slidesPerView: 'auto',
+            observer: true,
+            observeParents: true,
+            navigation: {
+              nextEl: '.section06 .swiper-button-next',
+              prevEl: '.section06 .swiper-button-prev',
+            },
+            pagination: {
+              el: '.section06 .swiper-pagination',
+              clickable: true,
+            },
+          });
+        });
+
+        $('#app a').map(function () {
+          var item = $(this).attr('href').split('/').slice(-1)[0];
+          var btnName = $(this).text();
+          var tagging = 'kr_b2c_2020-masterorigin-' + item + '-' + btnName;
+          gtmDataObject.push({
+            event: 'customEvent',
+            eventRaisedBy: 'FreeHTML',
+            eventCategory: 'User Engagement',
+            eventAction: 'Click',
+            eventLabel: tagging,
+            nonInteraction: 1,
+          });
+        });
+      });
+    </script>
+  </body>
+  <script type="text/javascript">
+    let i18n = new VueI18n({
+      locale: $('html').attr('lang'), // kr
+      messages: messages,
+    });
+    new Vue({ i18n: i18n }).$mount('#app');
+
+    function toScr(target) {
+      var scrollTop = $(target).offset().top;
+      $('html, body').stop().animate({ scrollTop: scrollTop }, 1000);
+    }
+  </script>
+
+  <!-- * 카카오맵 - 지도퍼가기 i18n 밑에 있어야함ㅠ -->
+  <!-- 1. 지도 노드 -->
+
+  <!--
+    2. 설치 스크립트
+    * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+  -->
+  <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+  <!-- 3. 실행 스크립트 -->
+  <script charset="UTF-8">
+    new daum.roughmap.Lander({
+      timestamp: '1665406981685',
+      key: '2byq8',
+      mapWidth: '597',
+      mapHeight: '285',
+    }).render();
+  </script>
+</html>
