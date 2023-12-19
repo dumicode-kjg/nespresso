@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900&display=swap&subset=korean");
+
+/* 적용시 삭제 */
+@font-face {
+  font-family: "Nespresso lucas";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(NespressoLucas-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Nespresso lucas";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(NespressoLucas-Med.woff) format("woff");
+}
+@font-face {
+  font-family: "Nespresso lucas";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(NespressoLucas-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "Nespresso lucas";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(NespressoLucas-XtraBd.woff) format("woff");
+}
+/*// 적용시 삭제 */
+
+body {
+  background: #fff;
+  color: #000;
+  line-height: 1;
+  text-align: center;
+  font-family: "Nespresso lucas", "Noto Sans KR", sans-serif;
+  word-break: keep-all;
+}
+
+.alt_text {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 1px;
+  height: 1px;
+  border: none;
+  opacity: 0.01;
+  background: none;
+  overflow: hidden;
+}
+
+.br_m {
+  display: none;
+}
+.br_pc {
+  display: block;
+  width: 100%;
+}
+
+.box_inner {
+  width: 100%;
+  max-width: 1192px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.visual {
+  display: flex;
+  height: 580px;
+  background: url(images/bg_visual.jpg) no-repeat center center;
+  background-size: cover;
+}
+.visual .txtbox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 142px;
+  text-align: left;
+}
+.visual .txtbox .title {
+  color: #393331;
+  font-size: 48px;
+  line-height: 57px;
+  font-weight: 700;
+}
+.visual .txtbox .title_p {
+  margin-top: 27px;
+  color: #393331;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 400;
+}
+
+.section01 {
+  padding: 89px 0 78px;
+  background: url(images/bg_section01.jpg) repeat-x center 0 #fff;
+}
+.section01 .box_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section01 .title {
+  color: #f9b0a0;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 700;
+}
+.section01 .gift_date {
+  display: flex;
+  justify-content: center;
+  margin-top: 67px;
+}
+.section01 .gift_date dt {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: #f9b0a0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 44px;
+  font-weight: 700;
+}
+.section01 .gift_date dd {
+  margin-left: 24px;
+  color: #53453f;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.section01 .gift_list {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.section01 .gift_list > li {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  margin: 0 20px;
+}
+.section01 .gift_list .tit {
+  flex: none;
+  height: 80px;
+  margin: 0;
+  background: url(images/bg_giftlist_tit.jpg) no-repeat center center #b06858;
+  color: #fff;
+  font-size: 36px;
+  line-height: 84px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+.section01 .gift_list .inbox {
+  flex: 1;
+  border: 2px solid #fde7dd;
+  padding-bottom: 26px;
+}
+.section01 .gift_list .inbox .in_img img {
+  width: auto;
+  height: 360px;
+}
+.section01 .gift_list .inbox .in_name {
+  color: #f9b0a0;
+  font-size: 28px;
+  line-height: 33px;
+  font-weight: 700;
+}
+.section01 .gift_list .inbox .in_info {
+  width: 340px;
+  padding: 15px 20px 18px;
+  margin: 50px auto 0;
+  background: #fdece4;
+  border-radius: 18px;
+}
+.section01 .gift_list .inbox .in_info .in_tit {
+  display: block;
+  width: 80px;
+  height: 40px;
+  margin: 0 auto 10px;
+  border-radius: 20px;
+  background: #f9b0a0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 44px;
+  font-weight: 700;
+}
+.section01 .gift_list .inbox .in_info dl {
+  display: flex;
+  justify-content: space-between;
+}
+.section01 .gift_list .inbox .in_info dl dt {
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: 400;
+}
+.section01 .gift_list .inbox .in_info dl dd {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+}
+.section01 .gift_list .inbox .in_txt {
+  margin-top: 28px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.section01 .gift_notice {
+  margin-top: 22px;
+}
+.section01 .gift_notice > li {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.section02 {
+  padding-bottom: 166px;
+}
+
+.section03 {
+  padding-bottom: 107px;
+}
+
+@media (max-width: 1280px) {
+  .box_inner {
+    width: 95.312vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .br_m {
+    display: block;
+    width: 100%;
+  }
+  .m_none {
+    display: none !important;
+  }
+
+  .box_inner {
+    width: 100%;
+    padding: 0 3.75vw;
+  }
+}
