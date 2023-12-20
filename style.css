@@ -218,6 +218,80 @@ body {
 .section02 {
   padding-bottom: 166px;
 }
+.section02 .bgbox {
+  padding: 88px 0 366px;
+  background: url(images/bg_section02.jpg) repeat-x 0 bottom #fdece4;
+}
+.section02 .bgbox .tit {
+  color: #393331;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 1em;
+}
+.section02 .bgbox .title {
+  margin-top: 15px;
+  color: #f9b0a0;
+  font-size: 48px;
+  line-height: 68px;
+  font-weight: 700;
+}
+.section02 .bgbox .txt01 {
+  margin-top: 25px;
+  color: #393331;
+  font-size: 28px;
+  line-height: 36px;
+}
+.section02 .bgbox .txt02 {
+  margin-top: 54px;
+  color: #393331;
+  font-size: 24px;
+  line-height: 29px;
+}
+.section02 .bgimg {
+  margin-top: -277px;
+}
+.section02 .bgimg img {
+  width: auto;
+  height: 548px;
+}
+.section02 .prd_item {
+  display: flex;
+  width: 700px;
+  margin: 50px auto 0;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+.section02 .prd_item .imgbox {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  background-color: #fef5f1;
+}
+.section02 .prd_item .imgbox .img img {
+  width: 160px;
+}
+.section02 .prd_item .imgbox .desc {
+  color: #b16959;
+  font-size: 18px;
+  line-height: 28px;
+}
+.section02 .prd_item .txtbox {
+  flex: 1;
+  padding: 26px 36px 40px;
+  text-align: left;
+}
+.section02 .prd_item .txtbox .tit {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+}
+.section02 .prd_item .txtbox .tit_p {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 28px;
+}
 
 .section03 {
   padding-bottom: 107px;
