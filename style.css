@@ -40,6 +40,61 @@ body {
   word-break: keep-all;
 }
 
+button {
+  font-family: "Noto Sans KR";
+  font-display: swap;
+  color: #000;
+  outline: 0;
+  border: 0;
+  background: none;
+  line-height: normal;
+}
+.lucas_font {
+  font-family: "Nespresso lucas" !important;
+}
+li,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.hidden {
+  overflow-y: hidden !important;
+  touch-action: none;
+}
+.cart-open .dialog-title {
+  font-family: "Noto Sans KR";
+}
+.clfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clfix {
+  display: inline-block;
+  display: block;
+}
+* html .clfix {
+  height: 1%;
+}
+.clfix {
+  zoom: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner_container {
+  width: 100%;
+  max-width: 1192px;
+  padding: 0 16px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .alt_text {
   position: absolute;
   top: -1px;
@@ -50,6 +105,10 @@ body {
   opacity: 0.01;
   background: none;
   overflow: hidden;
+}
+
+.fw_700 {
+  font-weight: 700 !important;
 }
 
 .br_m {
@@ -93,27 +152,27 @@ body {
   font-weight: 400;
 }
 
-.section01 {
+.sec01 {
   padding: 89px 0 78px;
-  background: url(images/bg_section01.jpg) repeat-x center 0 #fff;
+  background: url(images/bg_sec01.jpg) repeat-x center 0 #fff;
 }
-.section01 .box_inner {
+.sec01 .box_inner {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.section01 .title {
+.sec01 .title {
   color: #f9b0a0;
   font-size: 48px;
   line-height: 58px;
   font-weight: 700;
 }
-.section01 .gift_date {
+.sec01 .gift_date {
   display: flex;
   justify-content: center;
   margin-top: 67px;
 }
-.section01 .gift_date dt {
+.sec01 .gift_date dt {
   width: 80px;
   height: 40px;
   border-radius: 20px;
@@ -123,7 +182,7 @@ body {
   line-height: 44px;
   font-weight: 700;
 }
-.section01 .gift_date dd {
+.sec01 .gift_date dd {
   margin-left: 24px;
   color: #53453f;
   font-size: 28px;
@@ -132,18 +191,18 @@ body {
   text-align: left;
 }
 
-.section01 .gift_list {
+.sec01 .gift_list {
   display: flex;
   justify-content: center;
   margin-top: 80px;
 }
-.section01 .gift_list > li {
+.sec01 .gift_list > li {
   display: flex;
   flex-direction: column;
   width: 460px;
   margin: 0 20px;
 }
-.section01 .gift_list .tit {
+.sec01 .gift_list .tit {
   flex: none;
   height: 80px;
   margin: 0;
@@ -154,29 +213,29 @@ body {
   font-weight: 700;
   letter-spacing: -0.05em;
 }
-.section01 .gift_list .inbox {
+.sec01 .gift_list .inbox {
   flex: 1;
   border: 2px solid #fde7dd;
   padding-bottom: 26px;
 }
-.section01 .gift_list .inbox .in_img img {
+.sec01 .gift_list .inbox .in_img img {
   width: auto;
   height: 360px;
 }
-.section01 .gift_list .inbox .in_name {
+.sec01 .gift_list .inbox .in_name {
   color: #f9b0a0;
   font-size: 28px;
   line-height: 33px;
   font-weight: 700;
 }
-.section01 .gift_list .inbox .in_info {
+.sec01 .gift_list .inbox .in_info {
   width: 340px;
   padding: 15px 20px 18px;
   margin: 50px auto 0;
   background: #fdece4;
   border-radius: 18px;
 }
-.section01 .gift_list .inbox .in_info .in_tit {
+.sec01 .gift_list .inbox .in_info .in_tit {
   display: block;
   width: 80px;
   height: 40px;
@@ -188,79 +247,79 @@ body {
   line-height: 44px;
   font-weight: 700;
 }
-.section01 .gift_list .inbox .in_info dl {
+.sec01 .gift_list .inbox .in_info dl {
   display: flex;
   justify-content: space-between;
 }
-.section01 .gift_list .inbox .in_info dl dt {
+.sec01 .gift_list .inbox .in_info dl dt {
   font-size: 20px;
   line-height: 34px;
   font-weight: 400;
 }
-.section01 .gift_list .inbox .in_info dl dd {
+.sec01 .gift_list .inbox .in_info dl dd {
   font-size: 24px;
   line-height: 34px;
   font-weight: 400;
 }
-.section01 .gift_list .inbox .in_txt {
+.sec01 .gift_list .inbox .in_txt {
   margin-top: 28px;
   font-size: 14px;
   line-height: 20px;
 }
-.section01 .gift_notice {
+.sec01 .gift_notice {
   margin-top: 22px;
 }
-.section01 .gift_notice > li {
+.sec01 .gift_notice > li {
   font-size: 18px;
   line-height: 30px;
 }
 
-.section02 {
+.sec02 {
   padding-bottom: 166px;
 }
-.section02 .bgbox {
+.sec02 .bgbox {
   padding: 88px 0 366px;
-  background: url(images/bg_section02.jpg) repeat-x 0 bottom #fdece4;
+  background: url(images/bg_sec02.jpg) repeat-x 0 bottom #fdece4;
 }
-.section02 .bgbox .tit {
+.sec02 .bgbox .tit {
   color: #393331;
   font-size: 28px;
   line-height: 36px;
   letter-spacing: 1em;
 }
-.section02 .bgbox .title {
+.sec02 .bgbox .title {
   margin-top: 15px;
   color: #f9b0a0;
   font-size: 48px;
   line-height: 68px;
   font-weight: 700;
 }
-.section02 .bgbox .txt01 {
+.sec02 .bgbox .txt01 {
   margin-top: 25px;
   color: #393331;
   font-size: 28px;
   line-height: 36px;
 }
-.section02 .bgbox .txt02 {
+.sec02 .bgbox .txt02 {
   margin-top: 54px;
   color: #393331;
   font-size: 24px;
   line-height: 29px;
 }
-.section02 .bgimg {
+.sec02 .bgimg {
   margin-top: -277px;
 }
-.section02 .bgimg img {
+.sec02 .bgimg img {
   width: auto;
   height: 548px;
 }
-.section02 .prd_item {
+.sec02 .prd_item {
   display: flex;
   width: 700px;
   margin: 50px auto 0;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
 }
-.section02 .prd_item .imgbox {
+.sec02 .prd_item .imgbox {
   flex: none;
   display: flex;
   flex-direction: column;
@@ -269,37 +328,1089 @@ body {
   width: 260px;
   background-color: #fef5f1;
 }
-.section02 .prd_item .imgbox .img img {
+.sec02 .prd_item .imgbox .img img {
   width: 160px;
 }
-.section02 .prd_item .imgbox .desc {
+.sec02 .prd_item .imgbox .desc {
+  margin-top: 15px;
   color: #b16959;
   font-size: 18px;
   line-height: 28px;
 }
-.section02 .prd_item .txtbox {
+.sec02 .prd_item .txtbox {
   flex: 1;
   padding: 26px 36px 40px;
   text-align: left;
 }
-.section02 .prd_item .txtbox .tit {
+.sec02 .prd_item .txtbox .tit {
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
 }
-.section02 .prd_item .txtbox .tit_p {
+.sec02 .prd_item .txtbox .tit_p {
   margin-top: 10px;
   font-size: 20px;
   line-height: 28px;
 }
+.sec02 .prd_item .txtbox .price {
+  margin-top: 36px;
+  color: #f9b0a0;
+  font-size: 36px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.sec02 .prd_item .txtbox .info {
+  display: flex;
+  margin-top: 20px;
+}
+.sec02 .prd_item .txtbox .info dt {
+  flex: none;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #f9b0a0;
+  border-radius: 20px;
+  color: #f9b0a0;
+  font-size: 16px;
+  line-height: 42px;
+  font-weight: 700;
+  text-align: center;
+}
+.sec02 .prd_item .txtbox .info dd {
+  flex: 1;
+  padding: 5px 0;
+  margin-left: 20px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.sec02 .prd_item .txtbox .btn_addcart {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 0;
+  margin-top: 32px;
+  border: none;
+  background: #f9b0a0;
+  color: #fff;
+  font-size: 18px;
+  line-height: 52px;
+  font-weight: 700;
+}
 
-.section03 {
+.sec03 {
   padding-bottom: 107px;
+}
+.sec03 .title {
+  color: #f9b0a0;
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: 700;
+}
+.sec03 .imgtxt {
+  display: flex;
+  margin-top: 40px;
+}
+.sec03 .imgtxt .img {
+  flex: none;
+}
+.sec03 .imgtxt .img img {
+  width: 560px;
+}
+.sec03 .imgtxt .txt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+}
+.sec03 .prd_list {
+  display: flex;
+  justify-content: center;
+}
+.sec03 .prd_list > li {
+  width: 360px;
+  margin: 80px 28px 0;
+}
+.sec03 .prd_list .inbox {
+  display: flex;
+  flex-direction: column;
+}
+.sec03 .prd_list .inbox .img img {
+  width: 360px;
+}
+.sec03 .prd_list .inbox .tit {
+  margin-top: 27px;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.sec03 .prd_list .inbox .txt {
+  margin-top: 29px;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.sec04 {
+  padding: 97px 0 221px;
+  background: url(images/bg_sec04.jpg) repeat-x 0 bottom #fdece4;
+}
+.sec04 .title {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+}
+.recipe_swiper {
+  position: relative;
+  margin: 60px -20px 0;
+}
+.recipe_swiper .swiper {
+  overflow: hidden;
+}
+.recipe_swiper .swiper-slide {
+  width: 50%;
+  padding: 0 20px;
+}
+.recipe_swiper .inbox {
+  display: block;
+}
+.recipe_swiper .inbox .img img {
+  width: 100%;
+}
+.recipe_swiper .inbox .txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 104px;
+  padding: 16px;
+  margin: 0;
+  background: #fff;
+  color: #f9b0a0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.recipe_swiper .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 48px;
+}
+.recipe_swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 9px;
+  background: #8b8b8c;
+  opacity: 1;
+}
+.recipe_swiper .swiper-pagination-bullet-active {
+  background: #000;
+}
+.recipe_swiper .swiper-button-next {
+  top: 252px;
+  right: -10px;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  border-radius: 100%;
+  background: url(images/ico_arrow_next.png) no-repeat center center #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.recipe_swiper .swiper-button-prev {
+  top: 252px;
+  left: -10px;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  border-radius: 100%;
+  background: url(images/ico_arrow_prev.png) no-repeat center center #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.recipe_swiper .swiper-button-next.swiper-button-disabled,
+.recipe_swiper .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
+.sec05 {
+}
+.slider {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+.slider .leaders_slide {
+  position: relative;
+  padding-left: 22vw;
+  margin-top: 0;
+}
+.slider .leaders_slide .swiper {
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+.slider .leaders_slide .swiper-slide {
+  width: 351px;
+  transition: all 0.3s ease-in-out 0;
+  background-color: #fff;
+}
+.slider .leaders_slide .swiper-slide .slide_inner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  text-align: left;
+  overflow: hidden;
+}
+.slider .leaders_slide .swiper-slide .slide_inner .slider_text_left {
+  position: relative;
+  width: 350px;
+  float: left;
+  padding: 30px 0;
+  height: 100%;
+  z-index: 9;
+}
+.slider .leaders_slide .swiper-slide .slide_inner .slider_text_left h3 {
+  width: 100%;
+  float: left;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 0 30px;
+  margin: 0 0 10px;
+}
+.slider .leaders_slide .swiper-slide .slide_inner .slider_text_left .cstm_btn {
+  width: auto;
+  float: left;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #000;
+  padding: 0 22px;
+  border-radius: 100px;
+  margin-left: 30px;
+  background-color: #f2f2f2;
+  border: solid 2px #f2f2f2;
+}
+.slider .leaders_slide .swiper-slide .slide_inner .slider_text_left p {
+  text-align: left;
+  width: 100%;
+  float: left;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  color: #000;
+  padding: 0 30px;
+  margin: 17px 0;
+}
+/*.slider .leaders_slide .swiper-slide.slide04 .slide_inner .slider_text_left h3{font-size:22px}*/
+.slider .leaders_slide .swiper-slide .slide_inner .slider_image {
+  height: 380px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+.slider .leaders_slide .swiper-slide .slider_text_right {
+  display: none;
+  height: 100%;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  transition: all 0.3s ease-in-out 0;
+  padding: 30px;
+  position: relative;
+}
+.slider .leaders_slide .swiper-slide .slider_text_right p {
+  text-align: left;
+  width: 100%;
+  float: left;
+  margin: 10px 0 7px;
+  font-size: 16px;
+  color: #000;
+  line-height: 28px;
+}
+.slider .leaders_slide .swiper-slide .slider_text_right .cstm_btn {
+  position: absolute;
+  bottom: 60px;
+  left: 30px;
+  border: solid;
+  z-index: 99;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #8f7247;
+  padding: 18px 38px;
+  border: none;
+  border-radius: 100px;
+}
+.slider .leaders_slide .swiper-slide.active .slide_inner .slider_text_left p {
+  color: #fff;
+}
+.slider .leaders_slide .swiper-slide.active,
+.swiper-slide.active .slide_inner {
+  width: 815px;
+}
+.slider .leaders_slide .swiper-slide.active .slider_text_left {
+  width: 350px;
+  float: left;
+}
+.slider .leaders_slide .swiper-slide.active .slide_inner .slider_text_left h3,
+.swiper-slide.active .slide_inner .slider_text_left p {
+  color: #fff;
+}
+.slider .leaders_slide .swiper-slide.active .slide_inner .slider_text_left .cstm_btn {
+  background-color: #fff;
+  color: #000;
+}
+.slider .leaders_slide .swiper-slide.active .slider_text_left .slider_image {
+  height: 600px;
+  top: 0;
+}
+.slider .leaders_slide .swiper-slide.active .slider_text_right {
+  display: inline-block;
+  width: 460px;
+  float: right;
+  background-color: #fff;
+}
+.slider .leaders_slide .swiper-slide.active .slider_text {
+  border: solid 2px orange !important;
+  width: 500px;
+  display: block;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slider .leaders_slide .swiper-slide.slide01 .slide_inner .slider_image {
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/slider_pc1.jpg) no-repeat center center;
+  background-size: 100% 380px;
+}
+.slider .leaders_slide .swiper-slide.slide01.active .slider_text_left .slider_image {
+  background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/slidertext_hover_pc01.jpg);
+  background-size: 100% 600px;
+}
+.slider .leaders_slide .swiper-slide.slide02 .slide_inner .slider_image {
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/slider_pc2.jpg) no-repeat center center;
+  background-size: 100% 380px;
+}
+.slider .leaders_slide .swiper-slide.slide02.active .slider_text_left .slider_image {
+  background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/slidertext_hover_pc02.jpg);
+  background-size: 100% 600px;
+}
+.slider .leaders_slide .swiper-slide.slide03 .slide_inner .slider_image {
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/slider_pc3.jpg) no-repeat center center;
+  background-size: 100% 380px;
+}
+.slider .leaders_slide .swiper-slide.slide03.active .slider_text_left .slider_image {
+  background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/slidertext_hover_pc03.jpg);
+  background-size: 100% 600px;
+}
+.slider .leaders_slide .swiper-slide.slide04 .slide_inner .slider_image {
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/slider_pc4.jpg) no-repeat center center;
+  background-size: 100% 380px;
+}
+.slider .leaders_slide .swiper-slide.slide04.active .slider_text_left .slider_image {
+  background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/slidertext_hover_pc04.jpg);
+  background-size: 100% 600px;
+}
+
+.sec06 {
+  width: 100%;
+  float: left;
+  padding: 150px 0 190px;
+  background-color: #fff;
+}
+.sec06 h1 {
+  width: 100%;
+  color: #000;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+.sec06 p {
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #000;
+  margin: 0 0 70px;
+}
+
+.coffee_machine {
+  width: 100%;
+  float: left;
+}
+.coffee_machine > div {
+  width: calc((100% - 0px) / 4);
+  float: left;
+  padding: 0 5px;
+  text-align: center;
+}
+.coffee_machine > div.coffee_machine_inner img {
+  width: 100%;
+}
+.coffee_machine > div.coffee_machine_inner h1 {
+  width: 100%;
+  letter-spacing: -1px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 900;
+  float: left;
+  color: #000;
+  margin: 0 0 10px;
+}
+.coffee_machine > div.coffee_machine_inner h5 {
+  width: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  float: left;
+  color: #000;
+  margin: 0 0 20px;
+  height: 45px;
+}
+.coffee_machine > div.coffee_machine_inner p.cofe_text {
+  width: 100%;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  float: left;
+  color: #666;
+  margin: 0 0 30px;
+  height: 45px;
+}
+.coffee_machine > div.coffee_machine_inner p.price {
+  width: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  float: left;
+  color: #000;
+  margin: 0 0 30px;
+}
+.coffee_machine > div.coffee_machine_inner .apply {
+  width: auto;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 200px;
+  color: #fff;
+  background-color: #3d8705;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+.coffee_machine > div.coffee_machine_inner .cstm_btn {
+  width: auto;
+  padding: 0;
+  color: #8f7247;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 20px;
+  display: inline-block;
+}
+
+.sec07 {
+  padding: 0 0 105px;
+  background-color: #fff;
+  float: left;
+  width: 100%;
+}
+.sec07 .sec_tit {
+  line-height: 1.33333;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.sec07 .sec_tit em {
+  font-size: 48px;
+  letter-spacing: 0.13em;
+}
+.sec07 .sec_sub {
+  margin-top: 30px;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+}
+.sec07 .sec_sub {
+  margin-top: 0;
+  text-align: center;
+}
+.sec07 .sec_sub p {
+  width: 100%;
+  float: left;
+  line-height: 30px;
+}
+.sec07 .sec_sub p + p {
+  margin-top: 10px;
+  color: #030402;
+  font-weight: 300;
+}
+.sec07 .txt_wrap01 {
+  padding-bottom: 52px;
+}
+.sec07 .whateles {
+  width: 245px;
+  margin: 44px auto 0;
+}
+.sec07 .sns_list {
+  border: 2px solid #e9e9e8;
+  border-width: 2px 0;
+  padding: 30px 0;
+  text-align: center;
+}
+.sec07 .sns_list_icon {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 0;
+  vertical-align: -7px;
+}
+.sec07 .sns_list_icon a {
+  display: inline-block;
+  width: 35px;
+}
+.sec07 .sns_list_icon a + a {
+  margin-left: 50px;
+}
+.sec07 .sns_list_icon a img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.sec07 .txt_wrap02 {
+  padding: 52px 0 0;
+}
+.sec07 .btn_wrap {
+  margin-top: 46px;
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+.sec07 .std_btn {
+  display: inline-block;
+  width: 264px;
+  height: 56px;
+  line-height: 55px;
+  border-radius: 56px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #000;
+}
+
+.cs_info {
+  margin-top: 90px;
+  width: 100%;
+  float: left;
+}
+.cs_info ul {
+  font-size: 0;
+}
+.cs_info li {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  vertical-align: top;
+}
+.cs_info li .thumb {
+  width: 111px;
+  margin: 0 auto;
+  vertical-align: top;
+}
+.cs_info li .thumb img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.cs_info li p {
+  line-height: 1.5;
+  margin-top: 34px;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+button.mfp-close {
+  font-size: 40px;
+  color: #fff;
+  background-color: #000;
+}
+.modal-content {
+  border: none;
+  margin: 150px 0 0;
+  background: #fff;
+}
+.modal-content a {
+  text-decoration: none;
+}
+
+.modal.show .modal-dialog {
+  width: 1140px;
+  max-width: 1140px;
+  position: relative;
+}
+.mfp-close-btn-in .popup_container {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  height: 100%;
+}
+.mfp-close {
+  display: none;
+}
+.mfp-close-btn-in .pp_header {
+  width: 100%;
+  float: left;
+}
+.mfp-close-btn-in .pp_header .header_bg {
+  width: 100%;
+  float: left;
+  height: 374px;
+}
+.mfp-close-btn-in .close_btn {
+  position: absolute;
+  z-index: 99;
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/close_btn.png) no-repeat center center;
+  background-size: 100% auto;
+  height: 64px;
+  width: 64px;
+  font-size: 0;
+  top: -34px;
+  left: 50%;
+}
+.mfp-close-btn-in .height_scroll {
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.mfp-close-btn-in .inner_container1 {
+  max-width: 895px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.mfp-close-btn-in .pp_body {
+  width: 100%;
+  float: left;
+  padding: 40px 0 60px;
+}
+.mfp-close-btn-in .pp_body .pp_left,
+.mfp-close-btn-in .pp_footer .pp_left {
+  width: 45%;
+  float: left;
+}
+.mfp-close-btn-in .pp_body img {
+  width: 100%;
+}
+.mfp-close-btn-in .pp_body .pp_right,
+.mfp-close-btn-in .pp_footer .pp_right {
+  width: 55%;
+  float: right;
+  padding: 84px 0 0;
+}
+.mfp-close-btn-in .pp_body p,
+.mfp-close-btn-in .pp_body h6 {
+  text-align: left;
+  font-size: 24px;
+  line-height: 34px;
+  color: #000;
+  font-weight: 400;
+  margin: 0 0 45px;
+}
+.mfp-close-btn-in .pp_body h6 {
+  font-weight: 700;
+  margin: 0 0 28px;
+}
+.mfp-close-btn-in .pp_body h2,
+.mfp-close-btn-in .pp_body h1 {
+  text-align: left;
+  font-size: 30px;
+  line-height: 34px;
+  color: #000;
+  font-weight: 700;
+  margin: 0 0 40px;
+}
+.mfp-close-btn-in .pp_body h1 {
+  font-size: 34px;
+  margin: 0 0 5px;
+}
+.mfp-close-btn-in .pp_body p a {
+  float: right;
+  background: green;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 100px;
+  font-weight: 700;
+  color: #fff;
+}
+.mfp-close-btn-in .pp_footer {
+  width: 100%;
+  float: left;
+  padding: 80px 0;
+  background-color: #f2f2f2;
+}
+.mfp-close-btn-in .pp_footer .pp_left h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  color: #000;
+  margin: 0;
+  text-align: left;
+}
+.mfp-close-btn-in .pp_footer .pp_right {
+  padding: 0;
+}
+.mfp-close-btn-in .pp_footer .pp_right ul {
+  width: 100%;
+  float: left;
+}
+.mfp-close-btn-in .pp_footer .pp_right ul li {
+  width: 100%;
+  float: left;
+  margin: 0 0 10px;
+}
+.mfp-close-btn-in .pp_footer .pp_right ul li button {
+  color: #000;
+  width: 100%;
+  border: solid 1px #fff;
+  font-size: 24px;
+  line-height: 24px;
+  width: 100%;
+  float: left;
+  border-radius: 100px;
+  padding: 18px 40px;
+  text-align: left;
+  font-weight: 400;
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/left_arrow.png) no-repeat center right 30px;
+  background-size: auto 16px;
+  background-color: #fff;
+}
+.mfp-close-btn-in .pp_footer .pp_right ul li.active button {
+  color: #8a734d;
+  border-color: #8a734d;
+  font-weight: 700;
+  background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/left_arrow_active.png);
+}
+.mfp-close-btn-in .pp_body .w100,
+.mfp-close-btn-in .pp_footer .w100 {
+  width: 100%;
+  position: relative;
+}
+
+.mfp-close-btn-in .pp_body .padding_0 {
+  padding: 0;
+}
+.mfp-close-btn-in .pp_header .header_bg {
+  text-align: center;
+  line-height: 381px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+.mfp-close-btn-in .pp1 .pp_header .header_bg {
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/popup_banner01.jpg) no-repeat center center;
+  background-size: 100% 374px;
+}
+.mfp-close-btn-in .pp2 .pp_header .header_bg {
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/popup_banner02.jpg) no-repeat center center;
+  background-size: 100% 374px;
+}
+.mfp-close-btn-in .pp3 .pp_header .header_bg {
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/popup_banner03.jpg) no-repeat center center;
+  background-size: 100% 374px;
+}
+.mfp-close-btn-in .pp4 .pp_header .header_bg {
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/popup_banner04.jpg) no-repeat center center;
+  background-size: 100% 374px;
+}
+.mfp-close-btn-in #pop03 .pp_body,
+.mfp-close-btn-in .pp3 .pp_body {
+  padding-bottom: 0;
+}
+.mfp-close-btn-in #pop03 .pp_footer,
+.mfp-close-btn-in .pp3 .pp_footer {
+  margin-top: -6px;
+}
+.mfp-close-btn-in .pp_body .pp_config {
+  width: 100%;
+  float: left;
+}
+.mfp-close-btn-in .pp_body .pp_config p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  width: 100%;
+  float: left;
+}
+.mfp-close-btn-in .pp_body .pp_config p.config_text {
+  width: auto;
+  float: left;
+  margin: 0 0 20px;
+  border: solid 2px #8f7247;
+  padding: 4px 16px;
+  color: #8f7247;
+  font-size: 18px;
+  font-weight: 400;
+}
+.mfp-close-btn-in .pp_body .pp_config p span.mark_tag {
+  position: relative;
+  padding-right: 7px;
+}
+.mfp-close-btn-in .pp_body .pp_config p span.mark_tag:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #8f7247;
+  top: 50%;
+  left: -3px;
+}
+.mfp-close-btn-in .pp_body .pp_config p span.mark_tag:after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/mark_icon.png) no-repeat center right;
+  top: 35%;
+  right: 0;
+}
+.mfp-close-btn-in .pp_body .pp_config p span.big_text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #8f7247;
+}
+.mfp-close-btn-in .pp_footer.pp_footer_2 .pp_left h1 {
+  margin: 0 0 45px;
+}
+.mfp-close-btn-in .pp_footer.pp_footer_2 .pp_right ul li {
+  width: calc((100% - 0px) / 4);
+}
+.mfp-close-btn-in .pp_footer.pp_footer_2 .pp_right ul li button {
+  border-radius: 40px;
+  background-image: none;
+  width: 90%;
+  padding: 45px 2px;
+  height: 190px;
+}
+.mfp-close-btn-in .pp_footer.pp_footer_2 .pp_right ul li button p {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+.mfp-close-btn-in .pp_footer.pp_footer_2 .pp_right ul li button p span {
+  font-size: 16px;
+  font-weight: 900;
+  width: 100%;
+  float: left;
+  margin: 0 0 10px;
+}
+.mfp-close-btn-in #pop05 .pp_body,
+.mfp-close-btn-in #pop06 .pp_body,
+.mfp-close-btn-in #pop07 .pp_body,
+.mfp-close-btn-in #pop08 .pp_body,
+.pt150 {
+  padding-top: 120px;
+}
+
+.mobile_display {
+  display: none;
+}
+.pc_display {
+  display: block;
+}
+
+.mySwiper .swiper-button-prev {
+  background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/arrow_left_icon.png);
+  background-size: 100% auto;
+  width: 40px;
+  height: 40px;
+}
+.mySwiper .swiper-button-next {
+  background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/arrow_right_icon.png);
+  background-size: 100% auto;
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 1280px) {
   .box_inner {
     width: 95.312vw;
+  }
+
+  .sec05 {
+  }
+  .slider .leaders_slide .swiper-slide .slider_text_right p {
+    font-size: 1.5vw;
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left h3 {
+    font-size: 3.333vw;
+    line-height: 3.333vw;
+    padding: 0 2.778vw;
+    margin: 0 0 0.926vw;
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left .cstm_btn {
+    font-size: 1.667vw;
+    line-height: 3.333vw;
+    padding: 0 2.037vw;
+    margin-left: 2.778vw;
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left p {
+    font-size: 2.222vw;
+    line-height: 3.148vw;
+    margin: 1.574vw 0;
+  }
+
+  .sec06 {
+    padding: 13.889vw 0 17.593vw;
+  }
+  .sec06 h1 {
+    font-size: 3.333vw;
+    line-height: 4.259vw;
+    margin: 0 0 1.852vw;
+  }
+  .sec06 p {
+    margin: 0 0 6.481vw;
+    font-size: 2.6vw;
+    line-height: 4.148vw;
+  }
+
+  .sec07 {
+    padding: 0 0 9.7222vw;
+  }
+  .sec07 .sec_sub p + p {
+    margin-top: 0.9259vw;
+  }
+  .sec07 .txt_wrap01 {
+    padding-bottom: 4.8148vw;
+  }
+  .sec07 .whateles {
+    width: 22.6852vw;
+    margin: 4.0741vw auto 0;
+  }
+  .sec07 .sns_list {
+    padding: 2.7778vw 0;
+  }
+  .sec07 .sns_list_icon {
+    margin-left: 2.7778vw;
+    vertical-align: -0.6481vw;
+  }
+  .sec07 .sns_list_icon a {
+    width: 3.2407vw;
+  }
+  .sec07 .sns_list_icon a + a {
+    margin-left: 4.6296vw;
+  }
+  .sec07 .txt_wrap02 {
+    padding: 4.8148vw 0 0;
+  }
+  .sec07 .btn_wrap {
+    margin-top: 4.2593vw;
+  }
+  .cs_info {
+    margin-top: 8.3333vw;
+  }
+  .cs_info li .thumb {
+    width: 10.2778vw;
+  }
+  .cs_info li p {
+    margin-top: 3.1481vw;
+    font-size: 1.4815vw;
+  }
+
+  .coffee_machine > div.coffee_machine_inner h1 {
+    font-size: 1.7vw;
+    line-height: 20px;
+  }
+  .coffee_machine > div.coffee_machine_inner h5 {
+    font-size: 1.9vw;
+    line-height: 3vw;
+  }
+  .coffee_machine > div.coffee_machine_inner p.cofe_text {
+    font-size: 1.5vw;
+  }
+  .coffee_machine > div.coffee_machine_inner p.price {
+    font-size: 2vw;
+  }
+  .coffee_machine > div.coffee_machine_inner .apply {
+    font-size: 1.4vw;
+    padding: 2.6vw 2.4vw;
+  }
+  .coffee_machine > div {
+    padding: 0 2.037vw;
+  }
+
+  .mfp-close-btn-in .pp_header .header_bg {
+    background-size: cover !important;
+    height: 34.63vw;
+  }
+  .mfp-close-btn-in .pp_body p,
+  .mfp-close-btn-in .pp_body h6 {
+    font-size: 2.222vw;
+    line-height: 3.148vw;
+    margin: 0 0 4.167vw;
+  }
+  .mfp-close-btn-in .inner_container1 {
+    width: 90%;
+    max-width: 90%;
+    padding-left: 20px;
+  }
+  .mfp-close-btn-in .pp_footer .pp_left h1 {
+    font-size: 3.333vw;
+    line-height: 4.074vw;
+  }
+  .mfp-close-btn-in .pp_footer .pp_right ul li button {
+    font-size: 2.222vw;
+    padding: 1.667vw 3.704vw;
+    line-height: 2.222vw;
+  }
+
+  .modal.show .modal-dialog {
+    width: 90%;
+    max-width: 90%;
+    position: relative;
+  }
+  .mfp-close-btn-in .pp_header .header_bg {
+    line-height: 35.609vw;
+    font-size: 4.25vw;
   }
 }
 
@@ -312,8 +1423,462 @@ body {
     display: none !important;
   }
 
+  .inner_container {
+    padding: 0 5%;
+  }
+
   .box_inner {
     width: 100%;
     padding: 0 3.75vw;
+  }
+
+  .sec06 h1 {
+    font-size: 6.667vw;
+    line-height: 8.889vw;
+    margin: 0;
+  }
+  .sec06 h1 span {
+    display: block;
+  }
+  .sec06 p {
+    font-size: 4.444vw;
+    line-height: 6.296vw;
+  }
+
+  .sec07 {
+    padding: 0 0 7.2917vw;
+  }
+  .sec07 .sec_sub {
+    line-height: 1.5;
+    margin-top: 0;
+  }
+  #sec05 .sec_sub p {
+    font-size: 4.444vw;
+    line-height: 5.833vw;
+  }
+  .sec07 .sec_sub p + p {
+    margin-top: 1.8229vw;
+  }
+  .sec07 .txt_wrap01 {
+    padding-bottom: 6.25vw;
+  }
+  .sec07 .whateles {
+    width: 35.4167vw;
+    margin: 4.4271vw auto 0;
+  }
+  .sec07 .sns_list {
+    width: 92.4063vw;
+    margin: 0 auto;
+    padding: 5.7292vw 0 6.5104vw;
+  }
+  .sec07 .sns_list .sec_sub span {
+    display: block;
+  }
+  .sec07 .sns_list_icon {
+    display: block;
+    margin-left: 0;
+    margin-top: 4.4271vw;
+  }
+  .sec07 .sns_list_icon a {
+    width: 5.2083vw;
+  }
+  .sec07 .sns_list_icon a + a {
+    margin-left: 7.2917vw;
+  }
+  .sec07 .txt_wrap02 {
+    padding: 7.8125vw 0 0;
+  }
+  .sec07 .btn_wrap {
+    margin-top: 5.4688vw;
+  }
+  .sec07 .std_btn {
+    font-size: 3.889vw;
+    width: 55.537vw;
+    height: 11.111vw;
+    line-height: 11.111vw;
+  }
+  .cs_info {
+    width: 100%;
+    margin: 5.2083vw auto 0;
+  }
+  .cs_info ul {
+    width: 100%;
+  }
+  .cs_info li {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 15.625vw;
+    padding: 2.6042vw 0 2.6042vw 19.5313vw;
+    text-align: left;
+  }
+  .cs_info li + li {
+    border-top: 2px solid #e9e9e8;
+  }
+  .cs_info li .thumb {
+    position: absolute;
+    top: 2.6042vw;
+    left: 0;
+    width: 14.4531vw;
+  }
+  .cs_info li p {
+    position: absolute;
+    top: 50%;
+    left: 19.5313vw;
+    transform: translateY(-50%);
+    margin-top: 0;
+    font-size: 3.125vw;
+    color: #000 !important;
+  }
+
+  .coffee_machine > div {
+    width: calc((100% - 0px) / 2);
+  }
+  .coffee_machine > div.coffee_machine_inner h1 {
+    font-size: 3.704vw;
+    line-height: 4.815vw;
+  }
+  .coffee_machine > div.coffee_machine_inner h5 {
+    font-size: 3.333vw;
+    line-height: 4.444vw;
+    height: 8.333vw;
+    overflow: hidden;
+  }
+  .coffee_machine > div.coffee_machine_inner p.cofe_text {
+    font-size: 2.963vw;
+    line-height: 4.444vw;
+    height: 8vw;
+    overflow: hidden;
+    margin: 0 0 6.667vw;
+  }
+  .coffee_machine > div.coffee_machine_inner p.price {
+    font-size: 3.333vw;
+    line-height: 5.185vw;
+    margin: 0 0 6.667vw;
+  }
+  .coffee_machine > div.coffee_machine_inner .apply {
+    font-size: 3.963vw;
+    padding: 3.704vw;
+    width: 100%;
+  }
+
+  .swiper-slide,
+  .swiper-slide .coffee_machine {
+    width: 90% !important;
+  }
+  .swiper-slide .coffee_machine > div.coffee_machine_inner img {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+  }
+  .swiper-slide .coffee_machine > div {
+    width: 100%;
+    background: #fff;
+  }
+  .swiper-slide .coffee_machine > div.coffee_machine_inner .apply {
+    width: 80%;
+  }
+
+  .mfp-close-btn-in .white-popup {
+    padding: 0vw 0 0;
+  }
+  .modal-content {
+    margin: 20vw 0 0;
+  }
+  .mfp-close-btn-in .close_btn {
+    top: 2vw;
+    top: 2vw;
+    left: 40%;
+    width: 14.852vw;
+    height: 14.852vw;
+    background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/close_btn_mo.png) no-repeat center center;
+    background-size: 100% auto;
+  }
+  .mfp-close-btn-in .pp_header .header_bg {
+    height: 52.296vw;
+    background-size: auto 52.296vw !important;
+    line-height: 53.609vw;
+    font-size: 7.25vw;
+  }
+  .mfp-close-btn-in .pp1 .pp_header .header_bg {
+    background: url(https://www.nespresso.com/ecom/medias/sys_master/public/29588103036958/popup-banner01-mo.jpg) no-repeat center center;
+  }
+  .mfp-close-btn-in .pp2 .pp_header .header_bg {
+    background: url(https://www.nespresso.com/ecom/medias/sys_master/public/29588113326110/popup-banner02-mo.jpg) no-repeat center center;
+  }
+  .mfp-close-btn-in .pp3 .pp_header .header_bg {
+    background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/popup_banner03_mo.jpg) no-repeat center center;
+  }
+  .mfp-close-btn-in .pp4 .pp_header .header_bg {
+    background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/popup_banner04_mo.jpg) no-repeat center center;
+  }
+  .mfp-close-btn-in .pp_body {
+    padding: 18.519vw 0 12.963vw;
+  }
+  .mfp-close-btn-in .pp_body .inner_container1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .mfp-close-btn-in .pp_body .pp_left,
+  .mfp-close-btn-in .pp_footer .pp_left,
+  .mfp-close-btn-in .pp_body .pp_right,
+  .mfp-close-btn-in .pp_footer .pp_right {
+    width: 100%;
+  }
+  .mfp-close-btn-in .pp1 .pp_body .pp_left {
+    order: 2;
+  }
+  .mfp-close-btn-in .pp2 .pp_body .pp_left {
+    margin: 0 0 9.259vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_right {
+    padding: 0;
+  }
+  .mfp-close-btn-in .pp_body p,
+  .mfp-close-btn-in .pp_body h6 {
+    font-size: 4.444vw;
+    line-height: 6.296vw;
+    margin: 0 0 8.333vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p {
+    font-size: 3.333vw;
+  }
+  .mfp-close-btn-in .pp_footer {
+    padding: 18.519vw 0;
+  }
+  .mfp-close-btn-in .pp_footer .pp_left h1 {
+    font-size: 6.667vw;
+    line-height: 9.296vw;
+    margin: 0 0 9.259vw;
+  }
+  .mfp-close-btn-in .pp_footer .pp_right ul li button {
+    font-size: 3.333vw;
+    padding: 2.704vw 5.704vw;
+    line-height: 6.296vw;
+  }
+  .inner_container1 .youtube_wrap {
+    top: 0;
+  }
+  .mfp-close-btn-in .pp_body h2,
+  .mfp-close-btn-in .pp_body h1 {
+    font-size: 5.556vw;
+    line-height: 6.296vw;
+    margin: 0 0 8.796vw;
+  }
+  .mfp-close-btn-in #pop05 .pp4 .pp_body h1,
+  .mfp-close-btn-in #pop06 .pp4 .pp_body h1,
+  .mfp-close-btn-in #pop07 .pp4 .pp_body h1,
+  .mfp-close-btn-in #pop08 .pp4 .pp_body h1,
+  .pt150 h1 {
+    margin: 0 0 1vw !important;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p.mobile_display {
+    padding: 0 14.815vw;
+  }
+  .mfp-close-btn-in .pp_body p.mobile_display a {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .mySwiper {
+    width: 90%;
+    position: relative;
+    float: left;
+    height: 145vw;
+  }
+  .swiper-slide .coffee_machine {
+    width: 90% !important;
+  }
+  .swiper-slide .coffee_machine > div.coffee_machine_inner img {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+  }
+  .swiper-slide .coffee_machine > div {
+    width: 100%;
+    background: #fff;
+  }
+  .swiper-slide .coffee_machine > div.coffee_machine_inner .apply {
+    width: 80%;
+  }
+  .modal.show .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .sec05_slider {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 8.889vw 8.889vw 13.889vw;
+  }
+  .mySwiper1 {
+    width: 100%;
+    position: relative;
+    float: left;
+  }
+  .sec05_slider .swiper-slide > div.coffee_slider {
+    width: 100%;
+    position: relative;
+  }
+  .sec05_slider .swiper-slide > div.coffee_slider img {
+    width: 100%;
+  }
+  .sec05_slider .swiper-pagination {
+    bottom: -8.778vw;
+    left: 45%;
+  }
+  .sec05_slider .swiper-pagination-bullet {
+    background-color: transparent;
+    border: solid 0.093vw #000;
+    height: 2.315vw;
+    width: 2.315vw;
+    opacity: 1;
+    margin: 0 1.852vw;
+  }
+  .sec05_slider .swiper-pagination-bullet-active {
+    background-color: #000;
+  }
+  .sec05_slider .swiper-slide > div.coffee_slider a.coffee_pop_btn {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: 30.185vw;
+    height: 8.778vw;
+    font-size: 0;
+    z-index: 9;
+  }
+
+  .coffee_slider_popup img {
+    width: 100%;
+  }
+  .mfp-close-btn-in .coffee_slider_popup .pp_body h1 {
+    width: 100%;
+    float: left;
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0 0 2.917vw;
+  }
+  .coffee_slider_popup .non_clickbtn {
+    width: auto;
+    float: left;
+    font-size: 4.75vw;
+    font-weight: 400;
+    line-height: 7.396vw;
+    color: #000;
+    padding: 2.083vw 7.688vw;
+    border-radius: 100px;
+    margin-left: 0;
+    background-color: #f2f2f2;
+    border: solid 0.208vw #f2f2f2;
+    margin-bottom: 6.019vw;
+  }
+  .mfp-close-btn-in .coffee_slider_popup .pp_body h3 {
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 6vw;
+    font-weight: 700;
+    line-height: 8.083vw;
+    margin: 0 0 12.5vw;
+  }
+  .mfp-close-btn-in .coffee_slider_popup .pp_body p {
+    width: 100%;
+    float: left;
+    font-size: 3.75vw;
+  }
+  .mfp-close-btn-in .coffee_slider_popup .pp_body .clickable_btn {
+    width: auto;
+    float: left;
+    font-size: 4vw;
+    font-weight: 700;
+    color: #fff;
+    background-color: #8f7247;
+    padding: 3.958vw 8.125vw;
+    border-radius: 100px;
+  }
+  .mfp-close-btn-in .inner_container1 {
+    width: 90%;
+    max-width: 90%;
+    padding-left: 20px;
+  }
+
+  .mobile_slider_content {
+    width: 100%;
+    float: left;
+    background: #fff;
+    padding: 6vw 0 0;
+  }
+  .mobile_slider_content h3 {
+    width: 100%;
+    float: left;
+    font-size: 7vw;
+    font-weight: 700;
+    line-height: 6vw;
+    text-transform: uppercase;
+    color: #000;
+    padding: 0 6vw;
+    margin: 0 0 10px;
+  }
+  .mobile_slider_content .cstm_btn {
+    width: auto;
+    float: left;
+    font-size: 3.6vw;
+    font-weight: 400;
+    line-height: 7vw;
+    color: #000;
+    padding: 0 3vw;
+    border-radius: 100px;
+    margin-left: 7vw;
+    background-color: #f2f2f2;
+    border: solid 2px #f2f2f2;
+  }
+  .mobile_slider_content p {
+    text-align: left;
+    width: 100%;
+    float: left;
+    font-size: 4vw;
+    font-weight: 600;
+    line-height: 5vw;
+    color: #000;
+    padding: 0 6vw;
+    margin: 5vw 0;
+  }
+  .mobile_slider_content p span,
+  .mobile_slider_content p span button {
+    float: right;
+    color: #8a734d;
+    font-weight: 400;
+  }
+  .mobile_slider_content img {
+    width: 100%;
+    float: left;
+  }
+
+  .mobile_display {
+    display: block;
+  }
+  .pc_display {
+    display: none;
+  }
+
+  .mySwiper .swiper-button-next,
+  .mySwiper .swiper-button-prev {
+    bottom: 0;
+    top: auto;
+    z-index: 15;
+  }
+  .mySwiper .swiper-button-prev,
+  .mySwiper .swiper-container-rtl .swiper-button-next {
+    left: 30%;
+    background-size: 4vw auto;
+    background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/swiper_prev_icon.jpg);
+  }
+  .mySwiper .swiper-button-next {
+    right: 30%;
+    background-size: 4vw auto;
+    background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/swiper_next_icon.jpg);
   }
 }
