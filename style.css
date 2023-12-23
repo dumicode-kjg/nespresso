@@ -1638,6 +1638,10 @@ button.mfp-close {
     width: 95.312vw;
   }
 
+  .visual {
+    height: 45.312vw;
+  }
+
   .sec05 {
   }
   .slider .leaders_slide .swiper-slide .slider_text_right p {
