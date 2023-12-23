@@ -224,8 +224,8 @@ a {
   padding-bottom: 26px;
 }
 .sec01 .gift_list .inbox .in_img img {
-  width: auto;
-  height: 360px;
+  width: 100%;
+  height: auto;
 }
 .sec01 .gift_list .inbox .in_name {
   color: #f9b0a0;
@@ -927,10 +927,11 @@ a {
   border: solid;
   z-index: 99;
   font-size: 18px;
+  line-height: 54px;
   font-weight: 700;
   color: #fff;
   background-color: #8f7247;
-  padding: 18px 38px;
+  padding: 0 38px;
   border: none;
   border-radius: 100px;
 }
@@ -1343,6 +1344,9 @@ button.mfp-close {
   max-width: 1140px;
   position: relative;
 }
+.modal_recipe .modal-dialog {
+  align-items: flex-start;
+}
 .modal_recipe.show .modal-dialog {
   width: 1200px;
   max-width: 1200px;
@@ -1620,6 +1624,12 @@ button.mfp-close {
 .pc_display {
   display: block;
 }
+.cont_pc {
+  display: block;
+}
+.cont_m {
+  display: none;
+}
 
 .mySwiper .swiper-button-prev {
   background-image: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/arrow_left_icon.png);
@@ -1635,6 +1645,7 @@ button.mfp-close {
 }
 
 @media (max-width: 1280px) {
+  .inner_container,
   .box_inner {
     max-width: 93.125vw;
     padding: 0 1.25vw;
@@ -1686,6 +1697,626 @@ button.mfp-close {
     width: 35.937vw;
     margin: 0 1.562vw;
   }
+  .sec01 .gift_list .tit {
+    height: 6.25vw;
+    font-size: 2.812vw;
+    line-height: 6.562vw;
+  }
+  .sec01 .gift_list .inbox {
+    padding-bottom: 2.031vw;
+  }
+  .sec01 .gift_list .inbox .in_name {
+    font-size: 2.187vw;
+    line-height: 2.578vw;
+  }
+  .sec01 .gift_list .inbox .in_info {
+    width: 26.562vw;
+    margin-top: 3.906vw;
+    padding: 1.171vw 1.562vw 1.406vw;
+    border-radius: 1.406vw;
+  }
+  .sec01 .gift_list .inbox .in_info .in_tit {
+    width: 6.25vw;
+    height: 3.125vw;
+    margin-bottom: 0.781vw;
+    border-radius: 1.562vw;
+    font-size: 1.875vw;
+    line-height: 3.437vw;
+  }
+  .sec01 .gift_list .inbox .in_info dl dt {
+    font-size: 1.562vw;
+    line-height: 2.656vw;
+  }
+  .sec01 .gift_list .inbox .in_info dl dd {
+    font-size: 1.875vw;
+    line-height: 2.656vw;
+  }
+  .sec01 .gift_list .inbox .in_txt {
+    margin-top: 2.187vw;
+    font-size: 1.093vw;
+    line-height: 1.562vw;
+  }
+  .sec01 .gift_notice {
+    margin-top: 1.718vw;
+  }
+  .sec01 .gift_notice > li {
+    font-size: 1.406vw;
+    line-height: 2.343vw;
+  }
+
+  .sec02 {
+    padding-bottom: 5.156vw;
+  }
+  .sec02 .bgbox {
+    padding: 6.875vw 0 28.593vw;
+    background-size: 2.343vw auto;
+  }
+  .sec02 .bgimg {
+    margin-top: -21.64vw;
+  }
+  .sec02 .bgimg img {
+    height: 42.812vw;
+  }
+  .sec02 .prd_item {
+    width: 54.687vw;
+    margin-top: 3.906vw;
+  }
+  .sec02 .prd_item .imgbox {
+    width: 20.312vw;
+  }
+  .sec02 .prd_item .imgbox .img img {
+    width: 12.5vw;
+  }
+  .sec02 .prd_item .imgbox .desc {
+    margin-top: 1.171vw;
+    font-size: 1.406vw;
+    line-height: 2.187vw;
+  }
+  .sec02 .prd_item .txtbox {
+    padding: 2.031vw 2.812vw 3.125vw;
+  }
+  .sec02 .prd_item .txtbox .tit {
+    font-size: 2.812vw;
+    line-height: 3.75vw;
+  }
+  .sec02 .prd_item .txtbox .tit_p {
+    margin-top: 0.781vw;
+    font-size: 1.562vw;
+    line-height: 2.187vw;
+  }
+  .sec02 .prd_item .txtbox .price {
+    margin-top: 2.812vw;
+    font-size: 2.812vw;
+    line-height: 2.5vw;
+  }
+  .sec02 .prd_item .txtbox .info {
+    margin-top: 1.562vw;
+  }
+  .sec02 .prd_item .txtbox .info dt {
+    width: 10.156vw;
+    height: 3.125vw;
+    border-radius: 1.562vw;
+    font-size: 1.25vw;
+    line-height: 3.281vw;
+  }
+  .sec02 .prd_item .txtbox .info dd {
+    padding: 0.39vw 0;
+    margin-left: 1.562vw;
+    font-size: 1.406vw;
+    line-height: 2.343vw;
+  }
+  .sec02 .prd_item .txtbox .btn_addcart {
+    height: 3.75vw;
+    margin-top: 2.5vw;
+    font-size: 1.406vw;
+    line-height: 3.593vw;
+  }
+
+  .sec03 {
+    padding: 7.812vw 0;
+  }
+  .sec03 .title {
+    font-size: 3.75vw;
+    line-height: 5vw;
+  }
+  .sec03 .imgtxt {
+    margin-top: 3.125vw;
+  }
+  .sec03 .imgtxt .img img {
+    width: 43.75vw;
+  }
+  .sec03 .imgtxt .txt {
+    margin-left: 3.125vw;
+    font-size: 1.875vw;
+    line-height: 2.265vw;
+  }
+  .sec03 .prd_list > li {
+    width: 28.125vw;
+    margin: 6.25vw 2.187vw 0;
+  }
+  .sec03 .prd_list .inbox .img img {
+    width: 28.125vw;
+  }
+  .sec03 .prd_list .inbox .tit {
+    margin-top: 2.109vw;
+    font-size: 2.187vw;
+    line-height: 2.812vw;
+  }
+  .sec03 .prd_list .inbox .txt {
+    margin-top: 2.265vw;
+    font-size: 1.875vw;
+    line-height: 2.265vw;
+  }
+
+  .sec04 {
+    padding: 7.578vw 0 17.265vw;
+    background-size: 3.906vw auto;
+  }
+  .sec04 .title {
+    font-size: 3.125vw;
+    line-height: 3.75vw;
+  }
+  .recipe_swiper {
+    margin: 4.687vw -1.562vw 0;
+  }
+  .recipe_swiper .swiper-slide {
+    padding: 0 1.562vw;
+  }
+  .recipe_swiper .inbox .txt {
+    height: 8.125vw;
+    padding: 1.25vw;
+    font-size: 2.187vw;
+    line-height: 2.812vw;
+  }
+  .recipe_swiper .swiper-button-next {
+    top: 19.687vw;
+    right: -0.781vw;
+    width: 4.687vw;
+    height: 4.687vw;
+    background-size: 0.625vw auto;
+  }
+  .recipe_swiper .swiper-button-prev {
+    top: 19.687vw;
+    left: -0.781vw;
+    width: 4.687vw;
+    height: 4.687vw;
+    background-size: 0.625vw auto;
+  }
+  .recipe_swiper .swiper-pagination {
+    margin-top: 3.75vw;
+  }
+  .recipe_swiper .swiper-pagination-bullet {
+    margin: 0 0.703vw;
+  }
+
+  .sec05 {
+    padding: 8.906vw 0 3.828vw;
+  }
+  .sec05 .title {
+    font-size: 3.125vw;
+    line-height: 3.75vw;
+  }
+  .sec05 .title_p {
+    margin-top: 4.453vw;
+    font-size: 2.187vw;
+    line-height: 2.812vw;
+  }
+  .slider .leaders_slide {
+    margin-top: 7.031vw;
+  }
+  .slider .leaders_slide .swiper {
+    width: 65.625vw;
+  }
+  .slider .leaders_slide .swiper-slide {
+    padding: 0 1.562vw;
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner {
+    width: 28.125vw;
+    height: 46.875vw;
+    transform: translateX(34.375vw);
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left {
+    width: 28.125vw;
+    padding: 2.343vw 0;
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left h3 {
+    margin-bottom: 0.781vw;
+    padding: 0 2.343vw;
+    font-size: 2.812vw;
+    line-height: 2.812vw;
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left .cstm_btn {
+    padding: 0 1.718vw;
+    margin-left: 2.343vw;
+    border-radius: 7.812vw;
+    font-size: 1.406vw;
+    line-height: 2.812vw;
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left p {
+    margin: 1.562vw 0;
+    padding: 0 2.343vw;
+    font-size: 1.875vw;
+    line-height: 2.187vw;
+  }
+  .slider .leaders_slide .swiper-slide .slide_inner .slider_image {
+    height: 29.687vw;
+  }
+  .slider .leaders_slide .swiper-slide .slider_text_right {
+    padding: 2.343vw;
+  }
+  .slider .leaders_slide .swiper-slide .slider_text_right p {
+    margin: 0.781vw 0 0.546vw;
+    font-size: 1.25vw;
+    line-height: 2.031vw;
+  }
+  .slider .leaders_slide .swiper-slide .slider_text_right .cstm_btn {
+    bottom: 4.687vw;
+    left: 2.343vw;
+    padding: 0 2.968vw;
+    border-radius: 7.812vw;
+    font-size: 1.406vw;
+    line-height: 4.218vw;
+  }
+  .slider .leaders_slide .swiper-slide-next .slide_inner {
+    transform: translateX(0);
+  }
+  .slider .leaders_slide .swiper-slide-next ~ .swiper-slide .slide_inner {
+    transform: translateX(-34.375vw);
+  }
+  .slider .leaders_slide .swiper-slide-active .slide_inner {
+    width: 62.5vw;
+    transform: translateX(0);
+  }
+  .slider .leaders_slide .swiper-slide-active .slider_text_right {
+    width: 34.375vw;
+  }
+  .slider .leaders_slide .swiper-slide-active .slider_text_right > img {
+    width: auto;
+    height: 10.234vw;
+  }
+  .slider .leaders_slide .swiper-slide-active .slider_text_left .slider_image {
+    height: 46.875vw;
+  }
+  .slider .leaders_slide .swiper-slide.slide01 .slide_inner .slider_image,
+  .slider .leaders_slide .swiper-slide.slide02 .slide_inner .slider_image,
+  .slider .leaders_slide .swiper-slide.slide03 .slide_inner .slider_image,
+  .slider .leaders_slide .swiper-slide.slide04 .slide_inner .slider_image {
+    background-size: 100% 29.687vw;
+  }
+  .slider .leaders_slide .swiper-slide-active.slide01 .slider_text_left .slider_image,
+  .slider .leaders_slide .swiper-slide-active.slide02 .slider_text_left .slider_image,
+  .slider .leaders_slide .swiper-slide-active.slide03 .slider_text_left .slider_image,
+  .slider .leaders_slide .swiper-slide-active.slide04 .slider_text_left .slider_image {
+    background-size: 100% 46.875vw;
+  }
+  .slider .leaders_slide .swiper-button-next {
+    top: 19.687vw;
+    right: -0.781vw;
+    width: 4.687vw;
+    height: 4.687vw;
+    background-size: 0.625vw auto;
+  }
+  .slider .leaders_slide .swiper-button-prev {
+    top: 19.687vw;
+    left: -0.781vw;
+    width: 4.687vw;
+    height: 4.687vw;
+    background-size: 0.625vw auto;
+  }
+  .slider .leaders_slide .swiper-pagination {
+    margin-top: 3.75vw;
+  }
+  .slider .leaders_slide .swiper-pagination-bullet {
+    margin: 0 0.703vw;
+  }
+
+  .sec06 {
+    padding: 7.031vw 0 12.5vw;
+  }
+  .sec06 h1 {
+    margin-bottom: 3.906vw;
+    font-size: 3.125vw;
+    line-height: 3.906vw;
+  }
+  .sec06 p.title_p {
+    font-size: 2.343vw;
+    line-height: 2.812vw;
+  }
+  .date_coffee_machine {
+    margin-top: 1.718vw;
+  }
+  .date_coffee_machine dt {
+    width: 6.25vw;
+    height: 3.125vw;
+    border-radius: 1.562vw;
+    font-size: 1.875vw;
+    line-height: 3.437vw;
+  }
+  .date_coffee_machine dd {
+    margin-left: 1.25vw;
+    font-size: 2.187vw;
+    line-height: 3.125vw;
+  }
+  .coffee_machine > div {
+    padding: 0 0.39vw;
+  }
+  .coffee_machine > div.coffee_machine_inner h1 {
+    margin-bottom: 0.781vw;
+    font-size: 1.25vw;
+    line-height: 2.343vw;
+    letter-spacing: 0.078vw;
+  }
+  .coffee_machine > div.coffee_machine_inner h5 {
+    height: 3.515vw;
+    margin-bottom: 1.562vw;
+    font-size: 1.406vw;
+    line-height: 2.187vw;
+  }
+  .coffee_machine > div.coffee_machine_inner p.cofe_text {
+    height: 3.515vw;
+    margin-bottom: 2.343vw;
+    font-size: 1.25vw;
+    line-height: 2.187vw;
+  }
+  .coffee_machine > div.coffee_machine_inner p.price {
+    margin-bottom: 2.343vw;
+    font-size: 1.406vw;
+    line-height: 2.187vw;
+  }
+  .coffee_machine > div.coffee_machine_inner .apply {
+    margin-bottom: 1.562vw;
+    padding: 1.562vw;
+    border-radius: 15.625vw;
+    font-size: 1.25vw;
+  }
+  .coffee_machine > div.coffee_machine_inner .cstm_btn {
+    margin-bottom: 1.562vw;
+    font-size: 1.25vw;
+  }
+
+  .sec07 {
+    padding-bottom: 8.203vw;
+  }
+  .sec07 .sns_list {
+    padding: 2.343vw 0;
+  }
+  .sec07 .sec_sub {
+    font-size: 1.875vw;
+  }
+  .sec07 .sec_sub p {
+    line-height: 2.343vw;
+  }
+  .sec07 .sec_sub p + p {
+    margin-top: 0.781vw;
+  }
+  .sec07 .sns_list_icon {
+    margin-left: 2.343vw;
+    vertical-align: -0.546vw;
+  }
+  .sec07 .sns_list_icon a {
+    width: 2.734vw;
+  }
+  .sec07 .txt_wrap02 {
+    padding-top: 4.062vw;
+  }
+  .sec07 .btn_wrap {
+    margin-top: 3.593vw;
+  }
+  .sec07 .std_btn {
+    width: 20.625vw;
+    height: 4.375vw;
+    border-radius: 4.375vw;
+    font-size: 1.718vw;
+    line-height: 4.375vw;
+  }
+  .cs_info {
+    margin-top: 7.031vw;
+  }
+  .cs_info li .thumb {
+    width: 8.671vw;
+  }
+  .cs_info li p {
+    margin-top: 2.656vw;
+    font-size: 1.25vw;
+  }
+
+  .modal.show .modal-dialog {
+    width: 89.062vw;
+    max-width: 89.062vw;
+  }
+  .modal_recipe.show .modal-dialog {
+    width: 93.75vw;
+    max-width: 93.75vw;
+  }
+  .modal-content {
+    margin-top: 11.718vw;
+  }
+  .recipe_pop {
+    padding: 3.125vw;
+  }
+  .recipe_pop .btn_close {
+    top: 3.125vw;
+    right: 3.125vw;
+    width: 3.75vw;
+    height: 3.75vw;
+    background-size: 0.937vw auto;
+  }
+  .recipe_pop .tabcon_img {
+    width: 34.375vw;
+  }
+  .recipe_pop .tabcon_img .img_txt {
+    min-height: 17.968vw;
+    font-size: 1.25vw;
+    line-height: 2.031vw;
+  }
+  .recipe_pop .tabbox {
+    top: -3.75vw;
+  }
+  .recipe_pop .tabbox > li {
+    width: 18.75vw;
+    border-radius: 1.562vw 1.562vw 0 0;
+    font-size: 1.406vw;
+    line-height: 3.75vw;
+  }
+  .recipe_pop .tabcon_txt {
+    margin-left: 6.25vw;
+  }
+  .recipe_pop .tabcon_txt .tit01 {
+    font-size: 1.25vw;
+  }
+  .recipe_pop .tabcon_txt .txtimg {
+    margin-top: 1.562vw;
+  }
+  .recipe_pop .tabcon_txt .txtimg .tit02 {
+    font-size: 2.812vw;
+    line-height: 3.437vw;
+  }
+  .recipe_pop .tabcon_txt .txtimg .img_capsule {
+    width: 15.625vw;
+  }
+  .recipe_pop .tabcon_txt .txtimg .img_capsule img {
+    width: 6.25vw;
+  }
+  .recipe_pop .tabcon_txt .stit {
+    margin-top: 2.343vw;
+    padding-left: 1.093vw;
+    font-size: 1.875vw;
+    line-height: 2.343vw;
+  }
+  .recipe_pop .tabcon_txt .scon {
+    padding-left: 1.093vw;
+  }
+  .mi_list {
+    padding-bottom: 2.343vw;
+  }
+  .mi_list > li {
+    margin-top: 0.937vw;
+  }
+  .mi_list > li .ico img {
+    height: 3.281vw;
+  }
+  .mi_list > li .txt {
+    font-size: 1.25vw;
+    line-height: 2.5vw;
+  }
+  .mi_list > li.a .txt::before {
+    height: 0.703vw;
+  }
+  .recipe_pop .tabcon_txt .ctit {
+    margin-top: 0.937vw;
+    font-size: 1.562vw;
+    line-height: 1.718vw;
+  }
+  .recipe_pop .tabcon_txt .ctit::before {
+    height: 0.703vw;
+  }
+  .htm_list {
+    margin-top: 0.625vw;
+  }
+  .htm_list > li .num {
+    margin-right: 0.625vw;
+    font-size: 1.25vw;
+    line-height: 2.968vw;
+  }
+  .htm_list > li .ico {
+    margin-right: 0.937vw;
+  }
+  .htm_list > li .ico img {
+    height: 2.968vw;
+  }
+  .htm_list > li .txt {
+    padding: 0.468vw 0;
+    font-size: 1.25vw;
+    line-height: 2.031vw;
+  }
+
+  .mfp-close-btn-in .close_btn {
+    top: -2.656vw;
+    width: 5vw;
+    height: 5vw;
+  }
+  .mfp-close-btn-in #pop05 .pp_body,
+  .mfp-close-btn-in #pop06 .pp_body,
+  .mfp-close-btn-in #pop07 .pp_body,
+  .mfp-close-btn-in #pop08 .pp_body,
+  .pt150 {
+    padding-top: 9.375vw;
+  }
+  .mfp-close-btn-in .pp_body {
+    padding: 3.125vw 0 4.687vw;
+  }
+  .mfp-close-btn-in .inner_container1 {
+    max-width: 69.921vw;
+  }
+  .mfp-close-btn-in .pp_body h2,
+  .mfp-close-btn-in .pp_body h1 {
+    margin: 0 0 3.125vw;
+    font-size: 2.343vw;
+    line-height: 2.656vw;
+  }
+  .mfp-close-btn-in .pp_body h1 {
+    margin: 0 0 0.39vw;
+    font-size: 2.656vw;
+  }
+  .mfp-close-btn-in .pp_body p,
+  .mfp-close-btn-in .pp_body h6 {
+    margin: 0 0 3.515vw;
+    font-size: 1.875vw;
+    line-height: 2.656vw;
+  }
+  .mfp-close-btn-in .pp_body p a {
+    padding: 0.937vw 1.562vw;
+    border-radius: 7.812vw;
+    font-size: 1.25vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p.config_text {
+    margin: 0 0 1.562vw;
+    padding: 0.312vw 1.25vw;
+    font-size: 1.406vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p {
+    font-size: 1.406vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p span.mark_tag {
+    padding-right: 0.546vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p span.mark_tag:after {
+    height: 0.625vw;
+    background-size: auto 0.625vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p span.big_text {
+    font-size: 1.875vw;
+  }
+  .mfp-close-btn-in .pp_footer {
+    padding: 6.25vw 0;
+  }
+  .mfp-close-btn-in .pp_footer .pp_left h1 {
+    font-size: 2.812vw;
+  }
+  .mfp-close-btn-in .pp_footer.pp_footer_2 .pp_left h1 {
+    margin: 0 0 3.515vw;
+  }
+  .mfp-close-btn-in .pp_footer .pp_right ul li {
+    margin: 0 0 0.781vw;
+  }
+  .mfp-close-btn-in .pp_footer .pp_right ul li button {
+    background-position: right 2.343vw;
+    background-size: auto 1.25vw;
+    font-size: 1.875vw;
+    line-height: 1.875vw;
+  }
+  .mfp-close-btn-in .pp_footer.pp_footer_2 .pp_right ul li button {
+    height: 14.843vw;
+    padding: 3.515vw 0.156vw;
+    border-radius: 3.125vw;
+  }
+  .mfp-close-btn-in .pp_footer.pp_footer_2 .pp_right ul li button p {
+    font-size: 1.25vw;
+  }
+  .mfp-close-btn-in .pp_footer.pp_footer_2 .pp_right ul li button p span {
+    margin: 0 0 0.781vw;
+    font-size: 1.25vw;
+  }
 }
 
 @media (max-width: 960px) {
@@ -1705,6 +2336,8 @@ button.mfp-close {
     width: 100%;
     padding: 0 3.75vw;
   }
+
+  
 
   .sec06 h1 {
     font-size: 6.667vw;
@@ -2136,6 +2769,10 @@ button.mfp-close {
   }
   .pc_display {
     display: none;
+  }
+  .cont_m,
+  .cont_pc {
+    display: inline-block;
   }
 
   .mySwiper .swiper-button-next,
