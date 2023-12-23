@@ -1635,7 +1635,8 @@ button.mfp-close {
 
 @media (max-width: 1280px) {
   .box_inner {
-    width: 95.312vw;
+    max-width: 93.125vw;
+    padding: 0 1.25vw;
   }
 
   .visual {
