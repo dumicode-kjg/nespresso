@@ -58,7 +58,9 @@ ul {
   margin: 0;
   padding: 0;
 }
-p {
+p,
+dl,
+dd {
   margin-bottom: 0;
 }
 .hidden {
@@ -669,7 +671,7 @@ a {
   font-weight: 700;
 }
 .recipe_pop .tabcon_txt .stit::before {
-  content: '·';
+  content: "·";
   position: absolute;
   top: 0;
   left: 0;
@@ -702,7 +704,7 @@ a {
   line-height: 22px;
 }
 .recipe_pop .tabcon_txt .ctit::before {
-  content: '';
+  content: "";
   position: absolute;
   right: -1px;
   bottom: 0;
@@ -741,7 +743,7 @@ a {
   white-space: nowrap;
 }
 .mi_list > li.a .txt::before {
-  content: '';
+  content: "";
   position: absolute;
   right: -1px;
   bottom: 0;
@@ -798,7 +800,6 @@ a {
   font-size: 16px;
   line-height: 26px;
 }
-
 
 .sec05 {
   padding: 114px 0 49px;
@@ -1642,141 +1643,48 @@ button.mfp-close {
   .visual {
     height: 45.312vw;
   }
-
-  .sec05 {
+  .visual .txtbox {
+    margin-top: 11.093vw;
   }
-  .slider .leaders_slide .swiper-slide .slider_text_right p {
-    font-size: 1.5vw;
+  .visual .txtbox .title {
+    font-size: 3.75vw;
+    line-height: 4.453vw;
   }
-  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left h3 {
-    font-size: 3.333vw;
-    line-height: 3.333vw;
-    padding: 0 2.778vw;
-    margin: 0 0 0.926vw;
-  }
-  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left .cstm_btn {
-    font-size: 1.667vw;
-    line-height: 3.333vw;
-    padding: 0 2.037vw;
-    margin-left: 2.778vw;
-  }
-  .slider .leaders_slide .swiper-slide .slide_inner .slider_text_left p {
-    font-size: 2.222vw;
-    line-height: 3.148vw;
-    margin: 1.574vw 0;
+  .visual .txtbox .title_p {
+    margin-top: 2.109vw;
+    font-size: 2.812vw;
+    line-height: 3.359vw;
   }
 
-  .sec06 {
-    padding: 13.889vw 0 17.593vw;
+  .sec01 {
+    padding: 6.953vw 0 6.093vw;
+    background-size: 3.906vw auto;
   }
-  .sec06 h1 {
-    font-size: 3.333vw;
-    line-height: 4.259vw;
-    margin: 0 0 1.852vw;
+  .sec01 .title {
+    font-size: 3.75vw;
+    line-height: 4.531vw;
   }
-  .sec06 p.title_p {
-    font-size: 2.6vw;
-    line-height: 4.148vw;
+  .sec01 .gift_date {
+    margin-top: 5.234vw;
   }
-
-  .sec07 {
-    padding: 0 0 9.7222vw;
+  .sec01 .gift_date dt {
+    width: 6.25vw;
+    height: 3.125vw;
+    border-radius: 1.562vw;
+    font-size: 1.875vw;
+    line-height: 3.437vw;
   }
-  .sec07 .sec_sub p + p {
-    margin-top: 0.9259vw;
+  .sec01 .gift_date dd {
+    margin-left: 1.875vw;
+    font-size: 2.187vw;
+    line-height: 3.125vw;
   }
-  .sec07 .txt_wrap01 {
-    padding-bottom: 4.8148vw;
+  .sec01 .gift_list {
+    margin-top: 6.25vw;
   }
-  .sec07 .whateles {
-    width: 22.6852vw;
-    margin: 4.0741vw auto 0;
-  }
-  .sec07 .sns_list {
-    padding: 2.7778vw 0;
-  }
-  .sec07 .sns_list_icon {
-    margin-left: 2.7778vw;
-    vertical-align: -0.6481vw;
-  }
-  .sec07 .sns_list_icon a {
-    width: 3.2407vw;
-  }
-  .sec07 .sns_list_icon a + a {
-    margin-left: 4.6296vw;
-  }
-  .sec07 .txt_wrap02 {
-    padding: 4.8148vw 0 0;
-  }
-  .sec07 .btn_wrap {
-    margin-top: 4.2593vw;
-  }
-  .cs_info {
-    margin-top: 8.3333vw;
-  }
-  .cs_info li .thumb {
-    width: 10.2778vw;
-  }
-  .cs_info li p {
-    margin-top: 3.1481vw;
-    font-size: 1.4815vw;
-  }
-
-  .coffee_machine > div.coffee_machine_inner h1 {
-    font-size: 1.7vw;
-    line-height: 20px;
-  }
-  .coffee_machine > div.coffee_machine_inner h5 {
-    font-size: 1.9vw;
-    line-height: 3vw;
-  }
-  .coffee_machine > div.coffee_machine_inner p.cofe_text {
-    font-size: 1.5vw;
-  }
-  .coffee_machine > div.coffee_machine_inner p.price {
-    font-size: 2vw;
-  }
-  .coffee_machine > div.coffee_machine_inner .apply {
-    font-size: 1.4vw;
-    padding: 2.6vw 2.4vw;
-  }
-  .coffee_machine > div {
-    padding: 0 2.037vw;
-  }
-
-  .mfp-close-btn-in .pp_header .header_bg {
-    background-size: cover !important;
-    height: 34.63vw;
-  }
-  .mfp-close-btn-in .pp_body p,
-  .mfp-close-btn-in .pp_body h6 {
-    font-size: 2.222vw;
-    line-height: 3.148vw;
-    margin: 0 0 4.167vw;
-  }
-  .mfp-close-btn-in .inner_container1 {
-    width: 90%;
-    max-width: 90%;
-    padding-left: 20px;
-  }
-  .mfp-close-btn-in .pp_footer .pp_left h1 {
-    font-size: 3.333vw;
-    line-height: 4.074vw;
-  }
-  .mfp-close-btn-in .pp_footer .pp_right ul li button {
-    font-size: 2.222vw;
-    padding: 1.667vw 3.704vw;
-    line-height: 2.222vw;
-  }
-
-  .modal.show .modal-dialog {
-    width: 90%;
-    max-width: 90%;
-    position: relative;
-  }
-  .mfp-close-btn-in .pp_header .header_bg {
-    line-height: 35.609vw;
-    font-size: 4.25vw;
+  .sec01 .gift_list > li {
+    width: 35.937vw;
+    margin: 0 1.562vw;
   }
 }
 
