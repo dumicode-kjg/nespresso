@@ -1699,6 +1699,7 @@ button.mfp-close {
   }
   .sec01 .gift_list .tit {
     height: 6.25vw;
+    background-size: auto 100%;
     font-size: 2.812vw;
     line-height: 6.562vw;
   }
@@ -2334,10 +2335,286 @@ button.mfp-close {
 
   .box_inner {
     width: 100%;
-    padding: 0 3.75vw;
+    max-width: 100%;
+    padding: 0;
   }
 
-  
+  .visual {
+    height: 133.333vw;
+    background-image: url(images/bg_visual_m.jpg);
+  }
+  .visual .txtbox {
+    margin-top: 16.666vw;
+    padding: 0 6vw;
+  }
+  .visual .txtbox .title {
+    font-size: 10vw;
+    line-height: 12vw;
+  }
+  .visual .txtbox .title_p {
+    margin-top: 1.944vw;
+    font-size: 6.666vw;
+    line-height: 9.652vw;
+  }
+
+  .sec01 {
+    padding: 16.666vw 5.555vw 11.666vw;
+    background: none;
+  }
+  .sec01 .title {
+    font-size: 6.666vw;
+    line-height: 9.652vw;
+  }
+  .sec01 .gift_date {
+    margin-top: 5.555vw;
+  }
+  .sec01 .gift_date dt {
+    width: 13.333vw;
+    height: 7.777vw;
+    border-radius: 11.111vw;
+    font-size: 4.444vw;
+    line-height: 8.333vw;
+    font-weight: 500;
+  }
+  .sec01 .gift_date dd {
+    margin-left: 2.777vw;
+    font-size: 5.555vw;
+    line-height: 7.777vw;
+    font-weight: 700;
+  }
+  .sec01 .gift_list {
+    flex-direction: column;
+    align-items: center;
+    margin: 5.555vw auto 0;
+  }
+  .sec01 .gift_list > li {
+    width: 79.444vw;
+    margin: 5.555vw 0 0;
+  }
+  .sec01 .gift_list .tit {
+    height: 12.222vw;
+    font-size: 5vw;
+    line-height: 12.777vw;
+  }
+  .sec01 .gift_list .inbox {
+    padding-bottom: 5.555vw;
+  }
+  .sec01 .gift_list .inbox .in_name {
+    font-size: 4.444vw;
+    line-height: 6.436vw;
+  }
+  .sec01 .gift_list .inbox .in_info {
+    width: 60vw;
+    margin-top: 5.688vw;
+    padding: 1.438vw 5.555vw 2.73vw;
+    border-radius: 5.555vw;
+  }
+  .sec01 .gift_list .inbox .in_info .in_tit {
+    width: 13.816vw;
+    height: 5.997vw;
+    margin-bottom: 1.666vw;
+    border-radius: 11.111vw;
+    font-size: 3.333vw;
+    line-height: 6.666vw;
+  }
+  .sec01 .gift_list .inbox .in_info dl dt {
+    font-size: 3.333vw;
+    line-height: 5vw;
+  }
+  .sec01 .gift_list .inbox .in_info dl dd {
+    font-size: 3.333vw;
+    line-height: 5vw;
+  }
+  .sec01 .gift_list .inbox .in_txt {
+    margin-top: 2.777vw;
+    font-size: 3.333vw;
+    line-height: 5vw;
+  }
+  .sec01 .gift_notice {
+    margin-top: 1.666vw;
+    text-align: left;
+  }
+  .sec01 .gift_notice > li {
+    margin-top: 1.111vw;
+    padding-left: 1.388vw;
+    font-size: 3.333vw;
+    line-height: 6.111vw;
+    text-indent: -1.388vw;
+  }
+
+  .sec02 {
+    padding-bottom: 6.388vw;
+  }
+  .sec02 .bgbox {
+    padding: 11.111vw 0 32.777vw;
+    background-size: 2.5vw auto;
+  }
+  .sec02 .bgbox .tit {
+    font-size: 4.444vw;
+    line-height: 6.388vw;
+  }
+  .sec02 .bgbox .title {
+    margin-top: 2.777vw;
+    font-size: 6.666vw;
+    line-height: 9.722vw;
+  }
+  .sec02 .bgbox .txt01 {
+    margin-top: 5.555vw;
+    font-size: 4.444vw;
+    line-height: 6.666vw;
+  }
+  .sec02 .bgbox .txt02 {
+    margin-top: 5vw;
+    font-size: 3.888vw;
+    line-height: 5.833vw;
+  }
+  .sec02 .bgimg {
+    margin-top: -28.611vw;
+    padding: 0 4.444vw;
+  }
+  .sec02 .bgimg img {
+    width: 100%;
+    height: auto;
+  }
+  .sec02 .prd_item {
+    flex-direction: column;
+    width: auto;
+    margin: 5.555vw 4.444vw 0;
+    box-shadow: 1.111vw 1.111vw 4.444vw rgba(0, 0, 0, 0.25);
+  }
+  .sec02 .prd_item .imgbox {
+    flex-direction: row;
+    width: 100%;
+    padding: 11.111vw 8.333vw;
+  }
+  .sec02 .prd_item .imgbox .img img {
+    width: 28.888vw;
+  }
+  .sec02 .prd_item .imgbox .desc {
+    margin: 0 0 0 4.444vw;
+    font-size: 3.888vw;
+    line-height: 6.666vw;
+    text-align: left;
+  }
+  .sec02 .prd_item .txtbox {
+    padding: 7.922vw 7.777vw 7.483vw;
+  }
+  .sec02 .prd_item .txtbox .tit {
+    font-size: 5vw;
+    line-height: 5.941vw;
+  }
+  .sec02 .prd_item .txtbox .tit_p {
+    margin-top: 1.666vw;
+    font-size: 3.888vw;
+    line-height: 5.555vw;
+  }
+  .sec02 .prd_item .txtbox .price {
+    margin-top: 7.777vw;
+    font-size: 5vw;
+    line-height: 5.744vw;
+  }
+  .sec02 .prd_item .txtbox .info {
+    margin-top: 3.611vw;
+  }
+  .sec02 .prd_item .txtbox .info dt {
+    width: 25.75vw;
+    height: 7.922vw;
+    border-radius: 11.111vw;
+    font-size: 3.333vw;
+    line-height: 7.922vw;
+  }
+  .sec02 .prd_item .txtbox .info dd {
+    margin-left: 2.777vw;
+    padding: 1.388vw 0;
+    font-size: 3.888vw;
+    line-height: 5.555vw;
+  }
+  .sec02 .prd_item .txtbox .btn_addcart {
+    width: 71.305vw;
+    height: 9.508vw;
+    margin: 7.777vw auto 0;
+    font-size: 3.888vw;
+    line-height: 9.508vw;
+  }
+
+  .sec03 {
+    padding: 8.333vw 0 11.111vw;
+  }
+  .sec03 .title {
+    font-size: 6.666vw;
+    line-height: 9.722vw;
+  }
+  .sec03 .imgtxt {
+    flex-direction: column;
+    margin-top: 5.555vw;
+    padding: 0 5.555vw;
+  }
+  .sec03 .imgtxt .img {
+    width: 100%;
+  }
+  .sec03 .imgtxt .img img {
+    width: 100%;
+    height: auto;
+  }
+  .sec03 .imgtxt .txt {
+    justify-content: center;
+    margin: 5.555vw 0 0 0;
+    font-size: 3.888vw;
+    line-height: 5.555vw;
+    text-align: center;
+  }
+  .sec03 .prd_list {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.111vw;
+  }
+  .sec03 .prd_list > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 5.555vw 0 0;
+    background: #fff;
+    opacity: 0;
+    transition: 0s;
+  }
+  .sec03 .prd_list > li.active {
+    opacity: 1;
+    transition: .5s;
+  }
+  .sec03 .prd_list .inbox {
+    width: 50vw;
+  }
+  .sec03 .prd_list .inbox .img img {
+    width: 100%;
+  }
+  .sec03 .prd_list .inbox .tit {
+    margin-top: 3vw;
+    font-size: 3.888vw;
+    line-height: 5.555vw;
+  }
+  .sec03 .prd_list .inbox .txt {
+    height: 16.665vw;
+    margin-top: 3vw;
+    font-size: 3.888vw;
+    line-height: 5.555vw;
+    letter-spacing: -0.05em;
+  }
+
+  .sec04 {
+    
+  }
+
+
+
+
+
+
 
   .sec06 h1 {
     font-size: 6.667vw;
