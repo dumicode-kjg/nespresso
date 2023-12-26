@@ -555,6 +555,7 @@ a {
   background: url(images/ico_close.png) no-repeat center center rgba(245, 245, 245, 0.8);
   text-indent: -999px;
   overflow: hidden;
+  z-index: 15;
 }
 .recipe_pop .inner_item {
   display: none;
@@ -661,6 +662,9 @@ a {
 .recipe_pop .tabcon_txt .txtimg .img_capsule {
   flex: none;
   width: 200px;
+}
+.recipe_pop .tabcon_txt .img_txt {
+  display: none;
 }
 .recipe_pop .tabcon_txt .stit {
   position: relative;
@@ -2145,6 +2149,12 @@ button.mfp-close {
   .recipe_pop .tabcon_img {
     width: 34.375vw;
   }
+  .recipe_pop .tabcon_img .img_titbox {
+    top: 1.25vw;
+    left: 1.406vw;
+    font-size: 1.25vw;
+    line-height: 1.796vw;
+  }
   .recipe_pop .tabcon_img .img_txt {
     min-height: 17.968vw;
     font-size: 1.25vw;
@@ -2176,7 +2186,8 @@ button.mfp-close {
     width: 15.625vw;
   }
   .recipe_pop .tabcon_txt .txtimg .img_capsule img {
-    width: 6.25vw;
+    width: auto;
+    height: 6.25vw;
   }
   .recipe_pop .tabcon_txt .stit {
     margin-top: 2.343vw;
@@ -2301,7 +2312,7 @@ button.mfp-close {
     margin: 0 0 0.781vw;
   }
   .mfp-close-btn-in .pp_footer .pp_right ul li button {
-    background-position: right 2.343vw;
+    background-position: right 2.343vw center;
     background-size: auto 1.25vw;
     font-size: 1.875vw;
     line-height: 1.875vw;
@@ -2330,7 +2341,8 @@ button.mfp-close {
   }
 
   .inner_container {
-    padding: 0 5%;
+    max-width: 100%;
+    padding: 0 4.444vw;
   }
 
   .box_inner {
@@ -2579,16 +2591,17 @@ button.mfp-close {
     height: 100vh;
     margin: 0;
     padding: 5.555vw 0 0;
-    background: #fff;
-    opacity: 0;
-    transition: 0s;
-  }
-  .sec03 .prd_list > li.active {
-    opacity: 1;
-    transition: .5s;
   }
   .sec03 .prd_list .inbox {
     width: 50vw;
+    opacity: 0;
+    transform: translateY(40px);
+    /* transition: 0s; */
+  }
+  .sec03 .prd_list > li.active .inbox {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s;
   }
   .sec03 .prd_list .inbox .img img {
     width: 100%;
@@ -2607,26 +2620,144 @@ button.mfp-close {
   }
 
   .sec04 {
-    
+    padding: 11.111vw 0 27.777vw;
+    background-size: 6.944vw auto;
+  }
+  .sec04 .title {
+    font-size: 5.555vw;
+    line-height: 8.055vw;
+  }
+  .recipe_swiper {
+    margin: 5.555vw 0 0;
+    overflow: hidden;
+  }
+  .recipe_swiper .swiper {
+    width: 68.888vw;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  .recipe_swiper .swiper-slide {
+    width: 100%;
+    padding: 0 1.111vw;
+  }
+  .recipe_swiper .inbox .txt {
+    height: 11.111vw;
+    padding: 2.222vw;
+    font-size: 3.888vw;
+    line-height: 5.555vw;
+  }
+  .recipe_swiper .swiper-pagination {
+    margin-top: 6.944vw;
+  }
+  .recipe_swiper .swiper-pagination-bullet {
+    width: 1.388vw;
+    height: 1.388vw;
+    margin: 0 1.111vw;
+  }
+  .recipe_swiper .swiper-button-next {
+    display: none;
+    top: 20.277vw;
+    right: 6.666vw;
+    width: 8.888vw;
+    height: 8.888vw;
+    background-size: 1.186vw auto;
+    box-shadow: 0 0 2.222vw rgba(0, 0, 0, 0.25);
+  }
+  .recipe_swiper .swiper-button-prev {
+    display: none;
+    top: 20.277vw;
+    left: 6.666vw;
+    width: 8.888vw;
+    height: 8.888vw;
+    background-size: 1.186vw auto;
+    box-shadow: 0 0 2.222vw rgba(0, 0, 0, 0.25);
   }
 
+  .sec05 {
+    padding: 11.111vw 0;
+    background: #d9d9d9;
+  }
+  .sec05 .title {
+    font-size: 5.555vw;
+    line-height: 8.055vw;
+  }
+  .sec05 .title_p {
+    margin-top: 5.555vw;
+    font-size: 3.888vw;
+    line-height: 5.833vw;
+  }
 
+  .sec05_slider {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 11.111vw 12.222vw 0;
+  }
+  .mySwiper1 {
+    width: 100%;
+    position: relative;
+    float: left;
+  }
+  .sec05_slider .swiper-slide > div.coffee_slider {
+    width: 100%;
+    position: relative;
+  }
+  .sec05_slider .swiper-slide > div.coffee_slider img {
+    width: 100%;
+  }
+  .sec05_slider .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 6.944vw;
+  }
+  .sec05_slider .swiper-pagination-bullet {
+    width: 1.388vw;
+    height: 1.388vw;
+    margin: 0 1.111vw;
+    background: #8b8b8c;
+    opacity: 1;
+  }
+  .sec05_slider .swiper-pagination-bullet-active {
+    background: #000;
+  }
+  .sec05_slider .swiper-slide > div.coffee_slider a.coffee_pop_btn {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: 30.185vw;
+    height: 8.778vw;
+    font-size: 0;
+    z-index: 9;
+  }
 
-
-
-
-
+  .sec06 {
+    padding: 11.111vw 0 26.666vw;
+  }
   .sec06 h1 {
-    font-size: 6.667vw;
-    line-height: 8.889vw;
+    font-size: 5.555vw;
+    line-height: 8.055vw;
     margin: 0;
   }
-  .sec06 h1 span {
-    display: block;
-  }
   .sec06 p.title_p {
+    margin-top: 2.777vw;
+    font-size: 3.888vw;
+    line-height: 5.555vw;
+  }
+  .date_coffee_machine {
+    margin-top: 2.777vw;
+  }
+  .date_coffee_machine dt {
+    width: 13.333vw;
+    height: 7.777vw;
+    border-radius: 11.111vw;
     font-size: 4.444vw;
-    line-height: 6.296vw;
+    line-height: 8.333vw;
+  }
+  .date_coffee_machine dd {
+    margin-left: 2.777vw;
+    font-size: 5.555vw;
+    line-height: 7.777vw;
   }
 
   .sec07 {
@@ -2636,12 +2767,18 @@ button.mfp-close {
     line-height: 1.5;
     margin-top: 0;
   }
+  .sec07 .sec_sub p {
+    font-size: 4.444vw;
+    line-height: 5.833vw;
+  }
   #sec05 .sec_sub p {
     font-size: 4.444vw;
     line-height: 5.833vw;
   }
   .sec07 .sec_sub p + p {
-    margin-top: 1.8229vw;
+    margin-top: 5.555vw;
+    font-size: 4.444vw;
+    line-height: 6.388vw;
   }
   .sec07 .txt_wrap01 {
     padding-bottom: 6.25vw;
@@ -2661,25 +2798,27 @@ button.mfp-close {
   .sec07 .sns_list_icon {
     display: block;
     margin-left: 0;
-    margin-top: 4.4271vw;
+    margin-top: 0;
   }
   .sec07 .sns_list_icon a {
-    width: 5.2083vw;
+    width: 5.555vw;
   }
   .sec07 .sns_list_icon a + a {
-    margin-left: 7.2917vw;
+    margin-left: 5.555vw;
   }
   .sec07 .txt_wrap02 {
-    padding: 7.8125vw 0 0;
+    padding: 11.111vw 0 0;
   }
   .sec07 .btn_wrap {
-    margin-top: 5.4688vw;
+    margin-top: 11.111vw;
   }
   .sec07 .std_btn {
-    font-size: 3.889vw;
-    width: 55.537vw;
+    width: 55.555vw;
     height: 11.111vw;
+    border-radius: 15.555vw;
+    font-size: 4.444vw;
     line-height: 11.111vw;
+    font-weight: 700px;
   }
   .cs_info {
     width: 100%;
@@ -2711,56 +2850,59 @@ button.mfp-close {
     left: 19.5313vw;
     transform: translateY(-50%);
     margin-top: 0;
-    font-size: 3.125vw;
+    font-size: 3.333vw;
+    line-height: 1.3;
     color: #000 !important;
   }
 
   .coffee_machine > div {
     width: calc((100% - 0px) / 2);
   }
+  .coffee_machine > div.coffee_machine_inner > button.pp_open {
+    padding: 0;
+  }
   .coffee_machine > div.coffee_machine_inner h1 {
-    font-size: 3.704vw;
-    line-height: 4.815vw;
+    font-size: 3.888vw;
+    line-height: 4.722vw;
+  }
+  .coffee_machine > div.coffee_machine_inner h1.s_size {
+    font-size: 3.333vw;
   }
   .coffee_machine > div.coffee_machine_inner h5 {
-    font-size: 3.333vw;
-    line-height: 4.444vw;
-    height: 8.333vw;
+    font-size: 3.888vw;
+    line-height: 4.722vw;
+    height: 9.444vw;
     overflow: hidden;
   }
   .coffee_machine > div.coffee_machine_inner p.cofe_text {
-    font-size: 2.963vw;
-    line-height: 4.444vw;
-    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.888vw;
+    line-height: 4.722vw;
+    height: 9.444vw;
     overflow: hidden;
-    margin: 0 0 6.667vw;
+    margin: 0 0 8.888vw;
   }
   .coffee_machine > div.coffee_machine_inner p.price {
-    font-size: 3.333vw;
-    line-height: 5.185vw;
-    margin: 0 0 6.667vw;
+    float: none;
+    font-size: 3.888vw;
+    line-height: 4.722vw;
+    margin: 0 0 5.238vw;
   }
   .coffee_machine > div.coffee_machine_inner .apply {
-    font-size: 3.963vw;
-    padding: 3.704vw;
-    width: 100%;
+    font-size: 3.333vw;
+    line-height: 4vw;
+    padding: 2.222vw;
+    margin-bottom: 3.611vw;
+    width: auto;
   }
-
-  .swiper-slide,
-  .swiper-slide .coffee_machine {
-    width: 90% !important;
+  .coffee_machine > div.coffee_machine_inner .cstm_btn {
+    font-size: 3.888vw;
+    line-height: 4.722vw;
   }
-  .swiper-slide .coffee_machine > div.coffee_machine_inner img {
-    width: 50%;
-    height: auto;
-    display: inline-block;
-  }
-  .swiper-slide .coffee_machine > div {
-    width: 100%;
-    background: #fff;
-  }
-  .swiper-slide .coffee_machine > div.coffee_machine_inner .apply {
-    width: 80%;
+  .mySwiper .coffee_machine > div.coffee_machine_inner .cstm_btn {
+    margin-bottom: 7.777vw;
   }
 
   .mfp-close-btn-in .white-popup {
@@ -2768,15 +2910,152 @@ button.mfp-close {
   }
   .modal-content {
     margin: 20vw 0 0;
+    border-radius: 0;
   }
+
+  .modal_recipe .modal-content {
+    margin-top: 20vw;
+  }
+  .recipe_pop {
+    flex-direction: column;
+    padding: 0;
+  }
+  .recipe_pop .btn_close {
+    top: 11.111vw;
+    right: 50%;
+    width: 14.444vw;
+    height: 14.444vw;
+    background-size: 3.611vw auto;
+    transform: translateX(50%);
+  }
+  .recipe_pop .tabcon_img {
+    width: 100%;
+  }
+  .recipe_pop .tabcon_img .img_titbox {
+   top: auto; 
+   bottom: 4.166vw;
+   left: 4.166vw;
+   font-size: 3.888vw;
+   line-height: 6.388vw;
+  }
+  .recipe_pop .tabcon_img .img_txt {
+    display: none;
+  }
+  .recipe_pop .tabbox {
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+  .recipe_pop .tabbox > li {
+    flex: 1;
+    width: auto;
+    border-radius: 0;
+    font-size: 3.888vw;
+    line-height: 11.111vw;
+  }
+  .recipe_pop .tabcon_txt {
+    width: 100%;
+    margin: 0;
+    padding: 10vw 4.444vw 19.444vw
+  }
+  .recipe_pop .tabcon_txt .tit01 {
+    font-size: 3.888vw;
+    line-height: 5vw;
+  }
+  .recipe_pop .tabcon_txt .txtimg {
+    margin-top: 3.611vw;
+  }
+  .recipe_pop .tabcon_txt .txtimg .tit02 {
+    font-size: 7.777vw;
+    line-height: 9.166vw;
+  }
+  .recipe_pop .tabcon_txt .txtimg .img_capsule {
+    width: 27.777vw;
+    text-align: right;
+  }
+  .recipe_pop .tabcon_txt .txtimg .img_capsule img {
+    height: 16.666vw;
+  }
+  .recipe_pop .tabcon_txt .img_txt {
+    display: block;
+    margin-top: 8.333vw;
+    color: #695e54;
+    font-size: 3.888vw;
+    line-height: 7.222vw;
+  }
+  .recipe_pop .tabcon_txt .stit {
+    margin-top: 8.888vw;
+    padding-left: 3.888vw;
+    font-size: 5.555vw;
+    line-height: 6.666vw;
+  }
+  .recipe_pop .tabcon_txt .scon {
+    padding-left: 0;
+  }
+  .mi_list {
+    padding-bottom: 10vw;
+  }
+  .mi_list > li {
+    margin-top: 5vw;
+    text-align: center;
+  }
+  .mi_list > li.empty_box {
+    display: none;
+  }
+  .mi_list > li .ico img {
+    height: 7.222vw;
+  }
+  .mi_list > li .ico {
+    margin-bottom: 2.222vw;
+  }
+  .mi_list > li .txt {
+    font-size: 3.888vw;
+    line-height: 4.722vw;
+    white-space: unset;
+  }
+  .mi_list > li.a .txt::before {
+    height: 2.5vw;
+  }
+  .recipe_pop .tabcon_txt .ctit {
+    margin-top: 5vw;
+    font-size: 4.444vw;
+    line-height: 5.555vw;
+  }
+  .recipe_pop .tabcon_txt .ctit::before {
+    height: 2.5vw;
+  }
+  .htm_list {
+    margin-top: 8.888vw;
+  }
+  .htm_list > li .num {
+    margin-right: 2.222vw;
+    font-size: 3.888vw;
+    line-height: 8.888vw;
+  }
+  .htm_list > li .ico {
+    margin-right: 2.222vw;
+  }
+  .htm_list > li .ico img {
+    height: 8.888vw;
+  }
+  .htm_list > li .txt {
+    padding: 2.083vw 0;
+    font-size: 3.888vw;
+    line-height: 4.722vw;
+  }
+
+
+
+
+
   .mfp-close-btn-in .close_btn {
-    top: 2vw;
-    top: 2vw;
-    left: 40%;
-    width: 14.852vw;
-    height: 14.852vw;
+    top: 11.111vw;
+    left: 50%;
+    width: 14.444vw;
+    height: 14.444vw;
     background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/close_btn_mo.png) no-repeat center center;
-    background-size: 100% auto;
+    background-size: contain;
+    transform: translateX(-50%);
   }
   .mfp-close-btn-in .pp_header .header_bg {
     height: 52.296vw;
@@ -2784,20 +3063,8 @@ button.mfp-close {
     line-height: 53.609vw;
     font-size: 7.25vw;
   }
-  .mfp-close-btn-in .pp1 .pp_header .header_bg {
-    background: url(https://www.nespresso.com/ecom/medias/sys_master/public/29588103036958/popup-banner01-mo.jpg) no-repeat center center;
-  }
-  .mfp-close-btn-in .pp2 .pp_header .header_bg {
-    background: url(https://www.nespresso.com/ecom/medias/sys_master/public/29588113326110/popup-banner02-mo.jpg) no-repeat center center;
-  }
-  .mfp-close-btn-in .pp3 .pp_header .header_bg {
-    background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/popup_banner03_mo.jpg) no-repeat center center;
-  }
-  .mfp-close-btn-in .pp4 .pp_header .header_bg {
-    background: url(https://www.nespresso.com/shared_res/mos/free_html/kr/pro/2023_momento/popup_banner04_mo.jpg) no-repeat center center;
-  }
   .mfp-close-btn-in .pp_body {
-    padding: 18.519vw 0 12.963vw;
+    padding: 25.555vw 0 11.111vw;
   }
   .mfp-close-btn-in .pp_body .inner_container1 {
     display: flex;
@@ -2821,117 +3088,111 @@ button.mfp-close {
   .mfp-close-btn-in .pp_body p,
   .mfp-close-btn-in .pp_body h6 {
     font-size: 4.444vw;
-    line-height: 6.296vw;
-    margin: 0 0 8.333vw;
+    line-height: 5.555vw;
+    margin: 0 0 7.222vw;
   }
   .mfp-close-btn-in .pp_body .pp_config p {
     font-size: 3.333vw;
   }
   .mfp-close-btn-in .pp_footer {
-    padding: 18.519vw 0;
+    padding: 10vw 0 20vw;
   }
   .mfp-close-btn-in .pp_footer .pp_left h1 {
-    font-size: 6.667vw;
-    line-height: 9.296vw;
-    margin: 0 0 9.259vw;
+    font-size: 6.666vw;
+    line-height: 8.888vw;
+    margin: 0 0 11.666vw;
+  }
+  .mfp-close-btn-in .pp_footer .pp_right ul li {
+    margin-bottom: 2.777vw;
   }
   .mfp-close-btn-in .pp_footer .pp_right ul li button {
-    font-size: 3.333vw;
-    padding: 2.704vw 5.704vw;
-    line-height: 6.296vw;
+    border-width: 2px;
+    padding: 0 5vw;
+    background-position: right 5.833vw center;
+    background-size: auto 3.333vw;
+    font-size: 3.888vw;
+    line-height: 11.111vw;
   }
   .inner_container1 .youtube_wrap {
     top: 0;
   }
   .mfp-close-btn-in .pp_body h2,
   .mfp-close-btn-in .pp_body h1 {
-    font-size: 5.556vw;
-    line-height: 6.296vw;
-    margin: 0 0 8.796vw;
+    font-size: 7.777vw;
+    line-height: 10.833vw;
+    margin: 2.222vw 0 0 0;
   }
-  .mfp-close-btn-in #pop05 .pp4 .pp_body h1,
-  .mfp-close-btn-in #pop06 .pp4 .pp_body h1,
-  .mfp-close-btn-in #pop07 .pp4 .pp_body h1,
-  .mfp-close-btn-in #pop08 .pp4 .pp_body h1,
-  .pt150 h1 {
-    margin: 0 0 1vw !important;
+  .mfp-close-btn-in .pp_body p.pc_display {
+    display: block;
+  }
+  .mfp-close-btn-in .pp_body p.pc_display a {
+    display: none;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p.config_text {
+    margin: 0 0 3.333vw 0;
+    padding: 0.555vw 2.777vw 0;
+    border-width: 1px;
+    font-size: 3.75vw;
+    line-height: 6.666vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p span.mark_tag:after {
+    height: 1.388vw;
+    background-size: auto 1.388vw;
+  }
+  .mfp-close-btn-in .pp_body .pp_config p span.big_text {
+    font-size: 4.444vw;
+    font-weight: 400;
   }
   .mfp-close-btn-in .pp_body .pp_config p.mobile_display {
-    padding: 0 14.815vw;
+    padding: 0 12.5vw;
+    margin-bottom: 10vw;
   }
   .mfp-close-btn-in .pp_body p.mobile_display a {
     width: 100%;
     margin: 0 auto;
+    padding: 2.777vw;
     text-align: center;
+    font-size: 3.333vw;
+
+  }
+
+  .mfp-close-btn-in .pp_footer.pp_footer_2 {
+    padding: 17.777vw 0 20vw;
+  }
+  .mfp-close-btn-in .pp_footer.pp_footer_2 .pp_left h1 {
+    margin-bottom: 10vw;
   }
   .mySwiper {
-    width: 90%;
+    width: 75vw;
     position: relative;
-    float: left;
+    float: none;
     height: 145vw;
+    margin: 0 auto;
   }
-  .swiper-slide .coffee_machine {
-    width: 90% !important;
+  .mySwiper .swiper-slide {
+    padding: 0 2.083vw;
   }
-  .swiper-slide .coffee_machine > div.coffee_machine_inner img {
+  .mySwiper .swiper-slide .coffee_machine {
+    width: 100% !important;
+  }
+  .mySwiper .swiper-slide .coffee_machine > div.coffee_machine_inner img {
     width: 50%;
     height: auto;
     display: inline-block;
   }
-  .swiper-slide .coffee_machine > div {
+  .mySwiper .swiper-slide .coffee_machine > div {
     width: 100%;
+    padding: 0;
     background: #fff;
   }
-  .swiper-slide .coffee_machine > div.coffee_machine_inner .apply {
-    width: 80%;
+  .mySwiper .swiper-slide .coffee_machine > div.coffee_machine_inner .apply {
+    width: 33.333vw;
   }
+  
   .modal.show .modal-dialog {
     width: 100%;
     max-width: 100%;
     margin: 0;
-  }
-
-  .sec05_slider {
-    width: 100%;
-    float: left;
-    overflow: hidden;
-    padding: 8.889vw 8.889vw 13.889vw;
-  }
-  .mySwiper1 {
-    width: 100%;
-    position: relative;
-    float: left;
-  }
-  .sec05_slider .swiper-slide > div.coffee_slider {
-    width: 100%;
-    position: relative;
-  }
-  .sec05_slider .swiper-slide > div.coffee_slider img {
-    width: 100%;
-  }
-  .sec05_slider .swiper-pagination {
-    bottom: -8.778vw;
-    left: 45%;
-  }
-  .sec05_slider .swiper-pagination-bullet {
-    background-color: transparent;
-    border: solid 0.093vw #000;
-    height: 2.315vw;
-    width: 2.315vw;
-    opacity: 1;
-    margin: 0 1.852vw;
-  }
-  .sec05_slider .swiper-pagination-bullet-active {
-    background-color: #000;
-  }
-  .sec05_slider .swiper-slide > div.coffee_slider a.coffee_pop_btn {
-    position: absolute;
-    top: 30%;
-    right: 0;
-    width: 30.185vw;
-    height: 8.778vw;
-    font-size: 0;
-    z-index: 9;
   }
 
   .coffee_slider_popup img {
@@ -2948,45 +3209,46 @@ button.mfp-close {
   .coffee_slider_popup .non_clickbtn {
     width: auto;
     float: left;
-    font-size: 4.75vw;
+    font-size: 4.444vw;
     font-weight: 400;
-    line-height: 7.396vw;
+    line-height: 8.888vw;
     color: #000;
-    padding: 2.083vw 7.688vw;
-    border-radius: 100px;
+    padding: 0 5vw;
+    border-radius: 4.444vw;
     margin-left: 0;
     background-color: #f2f2f2;
     border: solid 0.208vw #f2f2f2;
-    margin-bottom: 6.019vw;
+    margin-bottom: 7.777vw;
   }
   .mfp-close-btn-in .coffee_slider_popup .pp_body h3 {
     width: 100%;
     float: left;
     text-align: left;
-    font-size: 6vw;
+    font-size: 4.444vw;
     font-weight: 700;
-    line-height: 8.083vw;
-    margin: 0 0 12.5vw;
+    line-height: 5.277vw;
+    margin: 0 0 10vw;
   }
   .mfp-close-btn-in .coffee_slider_popup .pp_body p {
     width: 100%;
     float: left;
-    font-size: 3.75vw;
+    font-size: 3.888vw;
   }
   .mfp-close-btn-in .coffee_slider_popup .pp_body .clickable_btn {
     width: auto;
     float: left;
-    font-size: 4vw;
+    font-size: 3.888vw;
+    line-height: 10vw;
     font-weight: 700;
     color: #fff;
     background-color: #8f7247;
-    padding: 3.958vw 8.125vw;
-    border-radius: 100px;
+    padding: 0 7.777vw;
+    border-radius: 5vw;
   }
   .mfp-close-btn-in .inner_container1 {
-    width: 90%;
-    max-width: 90%;
-    padding-left: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 4.444vw;
   }
 
   .mobile_slider_content {
@@ -2998,13 +3260,14 @@ button.mfp-close {
   .mobile_slider_content h3 {
     width: 100%;
     float: left;
-    font-size: 7vw;
+    font-size: 7.777vw;
     font-weight: 700;
     line-height: 6vw;
     text-transform: uppercase;
     color: #000;
     padding: 0 6vw;
-    margin: 0 0 10px;
+    margin: 0 0 3.333vw;
+    text-align: left;
   }
   .mobile_slider_content .cstm_btn {
     width: auto;
@@ -3015,7 +3278,7 @@ button.mfp-close {
     color: #000;
     padding: 0 3vw;
     border-radius: 100px;
-    margin-left: 7vw;
+    margin-left: 6vw;
     background-color: #f2f2f2;
     border: solid 2px #f2f2f2;
   }
@@ -3025,7 +3288,7 @@ button.mfp-close {
     float: left;
     font-size: 4vw;
     font-weight: 600;
-    line-height: 5vw;
+    line-height: 5.555vw;
     color: #000;
     padding: 0 6vw;
     margin: 5vw 0;
@@ -3034,6 +3297,12 @@ button.mfp-close {
   .mobile_slider_content p span button {
     float: right;
     color: #8a734d;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -0.277vw;
+    border: none;
+    font-size: 4vw;
+    line-height: 5.555vw;
     font-weight: 400;
   }
   .mobile_slider_content img {
